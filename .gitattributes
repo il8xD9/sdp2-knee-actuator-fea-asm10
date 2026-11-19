@@ -1,0 +1,10 @@
+# Shell scripts keep LF line endings on every system (Git for Windows would otherwise check them out with CRLF,
+# which breaks bash on Linux / WSL).
+*.sh text eol=lf
+# Binary files: never convert or diff as text
+*.pkl binary
+*.ipt binary
+*.iam binary
+*.docx binary
+*.xlsx binary
+*.png binary

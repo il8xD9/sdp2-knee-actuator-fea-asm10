@@ -17,7 +17,7 @@ follower pressure). Report: [`07_Report/FEA_asm10_routeA_HandcalcReference_v3.do
 | Gait cycle, 21 % stance (5.78°) – FEA / p·k | 1.66 | 1.24 | reached 60 kPa at 13 % only (E-133) |
 | Assist ratio α = M_dev / patient deficit, 21 % stance | 0.209 | 0.312 | – |
 
-- **Project pressure profile:** 6.89 N·m at 21 % stance. That is α = 0.209, or 105 % of the biomechanics target (α 0.20 = 6.59 N·m).
+- **Project pressure profile:** 6.89 N·m at 21 % stance. That is α = 0.209, or 104 % of the target (α 0.20 × 33 N·m = 6.60 N·m), as in the final project report D36.
 - **Stresses:** factor of safety is 8.5 or more for the bladder and 1.9 or more for the cover, up to 60 kPa.
 - **Angle cases that did not reach their angle:** 8.63°, 9.78°, 13°, 16° and 19° stopped while the empty device was being bent (E-150).
 
@@ -28,10 +28,11 @@ Every number is explained in the report. Every decision is in
 
 | Item | Version used | Note |
 |---|---|---|
-| Autodesk Inventor Nastran | 2026 (solver `Nastran.exe`, ADS NASTRAN 20.2) | Licensed software. The decks use Inventor Nastran cards (e.g. BSCONP contact, SLINESTABKSFACT), so other Nastran codes are not tested. |
-| Windows + PowerShell | Windows 11, PowerShell 5.1 | Needed for `run_queue.ps1`. |
-| Python | 3.14 (3.10+ should work) | `pip install -r requirements.txt` |
-| bash | Git Bash | Needed for `make_decks_v3.sh`; you can also type its commands by hand. |
+| Autodesk Inventor Nastran | 2026 (solver `Nastran.exe`, ADS NASTRAN 20.2.0.23) | Licensed software. The decks use Inventor Nastran cards (e.g. BSCONP contact, SLINESTABKSFACT), so other Nastran codes are not tested. |
+| Autodesk Inventor | 2026.2 (Build 302298010) | Only to open the CAD in `01_CAD_copy/`; not needed to re-run. |
+| Windows + PowerShell | Windows 11 Home, Windows PowerShell 5.1 | Needed for `run_queue.ps1`. |
+| Python | 3.14.8 | `pip install -r requirements.txt`: numpy 2.5.3, scipy 1.18.1, matplotlib 3.11.2, openpyxl 3.1.5, python-docx 1.2.0. These are the versions used; others were not tested. |
+| bash | Git Bash (Git for Windows 2.55.0) | Needed for `make_decks_v3.sh`; you can also type its commands by hand. |
 | PC | 7.7 GB RAM, 4 cores | One job at a time. Peak solver memory is 1.5–2.7 GB. All 12 runs take about 18 h in total. |
 
 ## Redo the simulation – step by step
@@ -100,6 +101,16 @@ from the code and came out identical.
 
 ### Run names
 
+The final project report (SDP II Final Report D36, Sections 5.4 and 6.3.2, Appendices A and P) uses short names for these
+runs. Each one is the same run as the full name used in this repository:
+
+| D36 name | Full run name (folder in this repository) |
+|---|---|
+| A3 | `CHK_FB` (the 3° case; same deck as HC_A3.0) |
+| A7.3, A8.6, A9.8, A13, A16, A19 | `HC_A7.3`, `HC_A8.6`, `HC_A9.8`, `HC_A13.0`, `HC_A16.0`, `HC_A19.0` |
+| C0, C20, C40, C60 | `HCC_P0`, `HCC_P20`, `HCC_P40`, `HCC_P60` |
+| CP | `HCC_PROJ` |
+
 | Run | Meaning |
 |---|---|
 | `CHK_FB` | Fixed angle 3° (same deck as HC_A3.0), 0–60 kPa used |
@@ -160,3 +171,23 @@ scripts rebuild the 12 report runs identically (see above).
   shown as `<PROJECT>` / `<USER_HOME>` / `<TEMP>`; they only appear in history notes, and the scripts do not use them.
 - The patient data (knee angle, healthy and patient knee moment, deficit) come from the team's biomechanics hand-over
   (Option 2, 13–36 % stance window). They are proposed values until the team records them.
+- The rounded values follow the final project report D36: target 6.60 N·m (0.20 × 33 N·m), assistance limit α ≤ 0.25.
+  The CSV files and the v3 report keep the unrounded values from the waveform (deficit 32.96 N·m and target 6.59 N·m at
+  21 % stance; limit 0.254). The results are the same.
+
+## Source of the patient data
+
+The knee-angle and knee-moment waveforms (healthy controls, and the reconstructed limb 2 months after ACL reconstruction)
+were digitised from:
+
+C. Büttner, C. Lisee, E. Bjornsen, A. Buck, N. Favoreto, A. Creighton, G. Kamath, J. Spang, J. R. Franz, T. Blackburn, and
+B. Pietrosimone, "Bilateral waveform analysis of gait biomechanics presurgery to 12 months following ACL reconstruction
+compared to controls," *J. Orthop. Res.*, vol. 43, no. 2, pp. 322–336, 2025, doi:
+[10.1002/jor.26001](https://doi.org/10.1002/jor.26001).
+
+They were interpolated to 1 % stance, and the moment was converted from BW·h with a reference height of 1.70 m (body mass
+70 kg). Source: the final project report D36, reference [2].
+
+## License
+
+All rights reserved; see [LICENSE](LICENSE).

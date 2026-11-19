@@ -160,7 +160,19 @@ def closed_volume(Xd, faces):
 
 def main(out_path, quick=False):
     base = out_path[:-4]
-    info = pickle.load(open(base + "_info.pkl", "rb"))
+    ipath = base + "_info.pkl"
+    if not os.path.exists(ipath):
+        # raw output restored from the release: the run info is kept with the deck in 02_Nastran_Model\<run>\
+        root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        name = os.path.basename(base); run = os.path.basename(os.path.dirname(os.path.abspath(out_path)))
+        for cand in (os.path.join(root, "02_Nastran_Model", run, name + "_info.pkl"),
+                     os.path.join(root, "02_Nastran_Model", name, name + "_info.pkl")):
+            if os.path.exists(cand):
+                if run != name and os.path.basename(os.path.dirname(cand)) == name:
+                    print("note: %s has no deck folder of its own; using the run info of 02_Nastran_Model\\%s "
+                          "(the latest deck of that name)" % (run, name))
+                ipath = cand; break
+    info = pickle.load(open(ipath, "rb"))
     mp = info["mesh"]
     if not os.path.isabs(mp):
         mp = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), mp)
