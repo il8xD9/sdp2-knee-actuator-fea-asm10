@@ -1,0 +1,1 @@
+﻿CHK_BED exit=0 seconds=1760 peakMB=1475 stopped=False start=2026-11-16T08:45:53

@@ -1,0 +1,120 @@
+# -*- coding: utf-8 -*-
+r"""Gait-cycle collector for full asseymbly 10 (15 Nov 2026, D-A10-CYC). Reads 04_Runs\<run>\<run>_results.csv written by
+post_a07.py and compares, frame by frame, the knee moment about the knee centre (Z axis through X = 4.057, Y = 0 = mesh meta H;
+post_a07: sum over the shank-half reactions of r x F, z component, + = extension) with the hand calculation.
+
+  families  B0C_* = hand-calc-matching idealised reference (rigid leg halves, bonded, stiff pad);  RC_* = real case.
+  device moment  M_dev(p, frame) = M_knee(run p) - M_knee(run P0) at the same subcase (same kinematics, 0 kPa = vented device).
+  hand calc  M_hc = p * k, k = 206 990 mm3 at d_h 65 (M1-M7 v12 E.3, Model B) -> 0.20699 N m per kPa.
+  angle cases (MULTI, B0_/REAL_A3.0 ... A19.0): M(p) - M(vented step at the same angle, before inflation) against p * k
+  (VREF after deflation is not used: it collapses the core bladder, CHK_CORE).
+Output: 05_Results\Tables\<tag>\cycle_moment.csv, margin_moment.csv, cycle_summary.csv; 05_Results\Images\<tag>\cycle_*.png.
+Usage: python -P cycle_a10.py --tag v3"""
+import argparse, csv, math, os
+R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+K_HC = 206990.0e-9 * 1000.0      # m3 * Pa/kPa -> N m per kPa  (0.20699)
+PS = ["P0", "P20", "P40", "P60", "P80", "P100", "PROJ"]
+
+
+def load(run):
+    f = os.path.join(R, "04_Runs", run, run + "_results.csv")
+    if not os.path.exists(f):
+        return None
+    rows = list(csv.DictReader(open(f)))
+    for r in rows:
+        for k, v in list(r.items()):
+            try: r[k] = float(v)
+            except (TypeError, ValueError): pass
+        r["converged"] = str(r.get("converged")) in ("True", "1", "1.0")
+    return rows
+
+
+def main():
+    ap = argparse.ArgumentParser(); ap.add_argument("--tag", required=True); a = ap.parse_args()
+    td = os.path.join(R, "05_Results", "Tables", a.tag); idir = os.path.join(R, "05_Results", "Images", a.tag)
+    os.makedirs(td, exist_ok=True); os.makedirs(idir, exist_ok=True)
+    out, summ = [], []
+    for fam, label in (("B0C", "idealised reference (rigid halves, bonded)"), ("RC", "real case")):
+        runs = {p: load("%s_%s" % (fam, p)) for p in PS}
+        base = runs["P0"]
+        # vented reference by knee angle (fallback when the P0 frame itself did not converge, e.g. the empty bladder unfolding)
+        import numpy as np
+        bp = sorted((r["theta"], r["M_knee_ext_Nm"]) for r in (base or []) if r["converged"] and r["kind"] in ("F", "W", "V"))
+        def m0_interp(th):
+            if len(bp) < 2 or th < bp[0][0] - 1e-9 or th > bp[-1][0] + 1e-9:
+                return None
+            return float(np.interp(th, [a for a, _ in bp], [b for _, b in bp]))
+        for p in PS:
+            rr = runs[p]
+            if rr is None:
+                summ.append(dict(family=fam, run="%s_%s" % (fam, p), status="not run")); continue
+            dev = []
+            for i, r in enumerate(rr):
+                if r["kind"] not in ("F", "W", "V", "S"):
+                    continue
+                bm = [q for q in (base or []) if q["kind"] == r["kind"] and int(q["frame"]) == int(r["frame"])]
+                b = bm[-1] if bm else None                  # P0 matched by phase and stance frame (E-69: core fill steps)
+                m = r.get("M_knee_ext_Nm") if r["converged"] else None
+                if b is not None and b["converged"]:
+                    mv, src = b["M_knee_ext_Nm"], "P0 same frame"
+                else:
+                    mv = m0_interp(r["theta"]); src = "P0 interpolated by angle" if mv is not None else "none"
+                md = (m - mv) if (m is not None and mv is not None) else None
+                hc = r["p_kPa"] * K_HC
+                row = dict(family=fam, model=label, run="%s_%s" % (fam, p), subcase=int(r["subcase"]), phase=r["kind"],
+                           stance_pct=int(r["frame"]), time_ms=r["ms"], theta_deg=r["theta"], p_kPa=r["p_kPa"],
+                           M_knee_Nm=m, M_vented_Nm=mv, vented_reference=src,
+                           M_device_Nm=md, M_handcalc_Nm=hc, ratio_FEA_to_hc=(md / hc if md is not None and hc > 1e-9 else None),
+                           V_bladder_mL=r.get("V_bladder_mid_cm3"), slip_maxabs_mm=r.get("slip_y_maxabs_mm"),
+                           p_skin_under_bladder_peak_kPa=r.get("p_under_bladder_peak_kPa"))
+                out.append(row)
+                if r["kind"] == "W":
+                    dev.append(row)
+            cw = [d for d in dev if d["M_device_Nm"] is not None]
+            pk = [d for d in dev if d["stance_pct"] == 21]
+            summ.append(dict(family=fam, run="%s_%s" % (fam, p), status="%d/%d window frames" % (len(cw), len(dev)),
+                             M_device_21pct_Nm=(pk[0]["M_device_Nm"] if pk else None), M_hc_21pct_Nm=(pk[0]["M_handcalc_Nm"] if pk else None),
+                             ratio_21pct=(pk[0]["ratio_FEA_to_hc"] if pk else None),
+                             M_device_window_max_Nm=(max(d["M_device_Nm"] for d in cw) if cw else None)))
+    mg = []
+    for fam in ("B0", "REAL"):
+        for ang in ("3.0", "7.3", "8.6", "9.8", "13.0", "16.0", "19.0"):
+            rr = load("%s_A%s" % (fam, ang))
+            if rr is None:
+                mg.append(dict(run="%s_A%s" % (fam, ang), status="not run")); continue
+            vb = [r for r in rr if r["kind"] == "S" and r["converged"]]
+            m0 = vb[-1]["M_knee_ext_Nm"] if vb and abs(vb[-1]["theta"] - rr[-1]["theta"]) < 1e-6 else None   # vented at the case angle
+            for r in rr:
+                if r["kind"] == "W":
+                    md = (r["M_knee_ext_Nm"] - m0) if (r["converged"] and m0 is not None) else None
+                    hc = r["p_kPa"] * K_HC
+                    mg.append(dict(run="%s_A%s" % (fam, ang), status="ok" if r["converged"] else "not converged", theta_deg=r["theta"],
+                                   p_kPa=r["p_kPa"], M_device_Nm=md, M_vented_before_Nm=m0, M_handcalc_Nm=hc,
+                                   ratio_FEA_to_hc=(md / hc if isinstance(md, float) and hc > 0 else None)))
+    for nm, rows in (("cycle_moment.csv", out), ("cycle_summary.csv", summ), ("margin_moment.csv", mg)):
+        keys = []
+        for r in rows:
+            keys += [k for k in r if k not in keys]
+        with open(os.path.join(td, nm), "w", newline="") as fh:
+            w = csv.DictWriter(fh, keys); w.writeheader(); w.writerows(rows)
+        print("written", os.path.join(td, nm), len(rows))
+    try:
+        import matplotlib; matplotlib.use("Agg"); import matplotlib.pyplot as plt
+        for fam in ("B0C", "RC"):
+            fig, ax = plt.subplots(1, 2, figsize=(12, 4.5))
+            for p in PS:
+                d = [r for r in out if r["run"] == "%s_%s" % (fam, p) and r["M_device_Nm"] is not None]
+                if not d: continue
+                l, = ax[0].plot([r["stance_pct"] for r in d], [r["M_device_Nm"] for r in d], "-o", ms=3, label=p)
+                ax[0].plot([r["stance_pct"] for r in d], [r["M_handcalc_Nm"] for r in d], "--", color=l.get_color(), lw=0.8)
+                ax[1].plot([r["stance_pct"] for r in d], [r["p_kPa"] for r in d], color=l.get_color(), label=p)
+            ax[0].axvspan(13, 36, color="0.92"); ax[0].set_xlabel("% stance"); ax[0].set_ylabel("device moment about the knee centre (N m)")
+            ax[0].set_title("%s: FEA (solid) vs hand calc p k (dashed)" % fam); ax[0].legend(fontsize=7)
+            ax[1].axvspan(13, 36, color="0.92"); ax[1].set_xlabel("% stance"); ax[1].set_ylabel("bladder pressure (kPa)"); ax[1].legend(fontsize=7)
+            fig.tight_layout(); fig.savefig(os.path.join(idir, "cycle_%s.png" % fam), dpi=150); plt.close(fig)
+    except Exception as ex:
+        print("plots not written:", ex)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,15 @@
+# a10 queue 4 (16 Nov 2026): hand-calc-matching reference = CORE model (D-A10-CORE, --core 25), 7 cycles + 7 angle cases; replaces the B0 part of queue_a10_2 / 2b
+02_Nastran_Model\B0C_P0\B0C_P0.nas
+02_Nastran_Model\B0C_P20\B0C_P20.nas
+02_Nastran_Model\B0C_PROJ\B0C_PROJ.nas
+02_Nastran_Model\B0C_P40\B0C_P40.nas
+02_Nastran_Model\B0C_P60\B0C_P60.nas
+02_Nastran_Model\B0C_P80\B0C_P80.nas
+02_Nastran_Model\B0C_P100\B0C_P100.nas
+02_Nastran_Model\B0_A3.0\B0_A3.0.nas
+02_Nastran_Model\B0_A7.3\B0_A7.3.nas
+02_Nastran_Model\B0_A8.6\B0_A8.6.nas
+02_Nastran_Model\B0_A9.8\B0_A9.8.nas
+02_Nastran_Model\B0_A13.0\B0_A13.0.nas
+02_Nastran_Model\B0_A16.0\B0_A16.0.nas
+02_Nastran_Model\B0_A19.0\B0_A19.0.nas

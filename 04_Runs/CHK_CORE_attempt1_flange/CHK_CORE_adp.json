@@ -1,0 +1,13 @@
+{
+    "nasAnalysisType": "NONLINEAR STATIC",
+    "nasDofs": 29376,
+    "nasElementCount": 233878,
+    "nasEquationSolverType": "PSS",
+    "nasFreqModesCount": 0,
+    "nasLoadCaseCount": 5,
+    "nasMaterialCount": 9,
+    "nasNodeCount": 4896,
+    "nasPropertyCount": 11,
+    "nasVersion": "20.2.0.23",
+    "nasWallclockRuntime": 435.220999956131
+}

@@ -1,0 +1,2 @@
+# check deck: slide-line contact stabilisation (E-108), 16 Nov 2026
+02_Nastran_Model\CHK_STAB1\CHK_STAB1.nas

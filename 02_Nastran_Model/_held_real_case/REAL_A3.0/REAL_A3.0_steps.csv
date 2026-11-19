@@ -1,0 +1,11 @@
+subcase,name,kind,frame_pct,time_ms,theta_deg,p_kPa,ninc,thermal
+1,D1 donning (25 % tightening),D,0,0.0,0.0,0.0,10,0.25
+2,D2 pre-tension,D,0,0.0,0.0,0.0,20,True
+3,flex vented to 3.00 deg sub 1/2,S_sub,0,0.0,1.5,0.0,3,True
+4,flex vented to 3.00 deg,S,0,0.0,3.0,0.0,3,True
+5,P 20 kPa at 3.00 deg,W,0,0.0,3.0,20.0,4,True
+6,P 40 kPa at 3.00 deg,W,0,0.0,3.0,40.0,4,True
+7,P 60 kPa at 3.00 deg,W,0,0.0,3.0,60.0,4,True
+8,P 80 kPa at 3.00 deg,W,0,0.0,3.0,80.0,4,True
+9,P 100 kPa at 3.00 deg,W,0,0.0,3.0,100.0,4,True
+10,VREF vented at 3.00 deg,VREF,0,0.0,3.0,0.0,10,True

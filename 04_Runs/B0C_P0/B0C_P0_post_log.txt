@@ -1,0 +1,31 @@
+﻿B0C_P0: 29/50 subcases converged
+   1 F 1% fill                th  -1.92 p   0.0  M  -0.907 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  427.4  it 5 bis 0
+   2 F 2% fill                th  -1.24 p   0.0  M  -0.590 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  426.1  it 4 bis 0
+   3 F 3% fill                th  -0.76 p   0.0  M  -0.363 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  425.1  it 4 bis 0
+   4 F 4% fill                th  -0.44 p   0.0  M  -0.211 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  424.4  it 4 bis 0
+   5 F 5% fill                th  -0.20 p   0.0  M  -0.096 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  423.9  it 4 bis 0
+   6 F 6% fill                th   0.01 p   0.0  M   0.005 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  423.4  it 4 bis 0
+   7 F 7% fill                th   0.24 p   0.0  M   0.115 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  422.9  it 4 bis 0
+   8 F 8% fill                th   0.52 p   0.0  M   0.251 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  422.2  it 4 bis 0
+   9 F 9% fill                th   0.88 p   0.0  M   0.425 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  421.4  it 4 bis 0
+  10 F 10% fill               th   1.34 p   0.0  M   0.641 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  420.3  it 5 bis 0
+  11 F 11% fill               th   1.92 p   0.0  M   0.866 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  418.9  it 8 bis 0
+  12 F 12% fill               th   2.59 p   0.0  M   1.106 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  415.9  it 10 bis 0
+  13 W 13%                    th   3.28 p   0.0  M   1.321 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  412.0  it 6 bis 0
+  14 W 14%                    th   3.93 p   0.0  M   1.481 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  407.3  it 8 bis 0
+  15 W 15%                    th   4.50 p   0.0  M   1.605 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  402.6  it 11 bis 0
+  16 W 16%                    th   4.95 p   0.0  M   1.689 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  398.7  it 31 bis 1
+  17 W 17%                    th   5.29 p   0.0  M   1.741 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  395.7  it 11 bis 0
+  18 W 18%                    th   5.53 p   0.0  M   1.775 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  393.6  it 9 bis 0
+  19 W 19%                    th   5.68 p   0.0  M   1.795 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  392.1  it 8 bis 0
+  20 W 20%                    th   5.76 p   0.0  M   1.807 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  391.5  it 4 bis 0
+  21 W 21%                    th   5.78 p   0.0  M   1.808 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  391.3  it 4 bis 0
+  22 W 22%                    th   5.75 p   0.0  M   1.803 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  391.5  it 5 bis 0
+  23 W 23%                    th   5.68 p   0.0  M   1.793 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  392.0  it 5 bis 0
+  24 W 24%                    th   5.59 p   0.0  M   1.783 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  392.9  it 6 bis 0
+  25 W 25%                    th   5.48 p   0.0  M   1.768 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  393.9  it 7 bis 0
+  26 W 26%                    th   5.37 p   0.0  M   1.752 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  394.9  it 8 bis 0
+  27 W 27%                    th   5.25 p   0.0  M   1.735 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  396.0  it 7 bis 0
+  28 W 28%                    th   5.15 p   0.0  M   1.720 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  396.9  it 5 bis 0
+  29 W 29%                    th   5.05 p   0.0  M   1.705 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  397.7  it 6 bis 0
+FATAL: ['FATAL ERROR E5076: MAXIMUM NUMBER OF BISECTIONS PERMITTED REACHED', 'FATAL ERROR E5076: MAXIMUM NUMBER OF BISECTIONS PERMITTED REACHED          (1)']

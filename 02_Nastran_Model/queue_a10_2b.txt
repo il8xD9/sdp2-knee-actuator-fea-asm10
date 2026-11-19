@@ -1,0 +1,5 @@
+# a10 queue 2b (16 Nov 2026, owner: angle cases 3, 7.28, 8.63, 9.78, 13, 16, 19 deg): the 4 new idealised-reference angle decks; started automatically after queue_a10_2 ends (scripts\chain_a10.ps1)
+02_Nastran_Model\B0_A3.0\B0_A3.0.nas
+02_Nastran_Model\B0_A13.0\B0_A13.0.nas
+02_Nastran_Model\B0_A16.0\B0_A16.0.nas
+02_Nastran_Model\B0_A19.0\B0_A19.0.nas

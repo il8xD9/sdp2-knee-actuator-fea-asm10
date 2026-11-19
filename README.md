@@ -89,6 +89,7 @@ from the code and came out identical.
 | Folder | Content |
 |---|---|
 | `00_Plan_and_Decisions/` | Briefs, status, decisions (D-A10-*), knee-angle and patient-moment waveform (`waveform_O2_opt1.csv`) |
+| `01_CAD_copy/` | Inventor CAD of full assembly 10 (reference only, see below) |
 | `cad_build_code/` | `geo8.py` + `geo_A150.json`: the code that built the CAD geometry. The mesh is made from it. |
 | `02_Nastran_Model/` | Mesh `mesh_M0.pkl`, rigid-leg calibration `calib_rigid.json`, one folder per run with the deck (`.nas`), mesh/step info and seal check; `queue_v3.txt` |
 | `04_Runs/<run>/` | Solver log (`.LOG`), post-processed results (`_results.csv/.xlsx`), convergence history, run time. Raw `.OUT/.FNO` are not committed (see below). |
@@ -106,13 +107,52 @@ from the code and came out identical.
 | `HCC_P0`, `HCC_P20`, `HCC_P40`, `HCC_P60` | Gait cycle (stance 1–36 %, Option-2 window 13–36 %) at 0 (vented), 20, 40, 60 kPa |
 | `HCC_PROJ` | Gait cycle with the project pressure profile (6.9 kPa at 13 % → 20 kPa at 21 % → 2.8 kPa at 36 %) |
 
-## Not in this repository
+## Raw solver output (GitHub Release)
 
-- **Raw solver output** (`.OUT`, `.FNO`, `.RSF`, about 3.3 GB). GitHub rejects files over 100 MB; run step 2 to regenerate them.
-- **Inventor CAD files** (`.ipt` / `.iam`). They are not needed to re-run, because the mesh comes from `cad_build_code/`.
-  Pictures of the CAD are in `05_Results/Images/v3_HC/cad_*.png`.
-- **Superseded runs** of the first reference attempt (B0*, B0C*, CHK_* checks other than CHK_FB) and the real-case decks
-  (held, not run). The report's Section 6 and the error log describe them.
+The raw Nastran files (`.OUT`, `.FNO`, `.RSF`, console logs: about 3 GB, single files up to 350 MB) are too big for git.
+They are attached to the release **`raw-output-v3`** (repository page → *Releases*), with one zip per run: `raw_<run>.zip`.
+`RAW_OUTPUT_MANIFEST.txt` lists every zip with its size and SHA-256.
+
+To restore them, unzip each archive **at the repository root**. The paths inside are `04_Runs/<run>/<file>`, so every file
+lands next to that run's committed results.
+
+```powershell
+# example: one run
+Expand-Archive raw_HCC_PROJ.zip -DestinationPath . -Force
+```
+
+With the raw files in place you can rerun the post-processing (`python -P scripts/post_a07.py 04_Runs/<run>/<run>.OUT`) and
+`figs_hc_v3.py` without `--skip_out`, without running Nastran again. Inside the text output the Windows user name in stored
+file paths is replaced by `user_`, which has the same length, so the line layout is unchanged.
+
+## Inventor CAD (`01_CAD_copy/`)
+
+These are the 13 CAD files of full assembly 10 (`full asseymbly 10.iam`, actuator-V11, cover.09, side vents, leg and strap
+parts), copied from the project. You don't need them to re-run the FEA, because the mesh is built from `cad_build_code/`.
+They are here for reference and need Autodesk Inventor 2026. Author, Designer and Description are set to roles. Inventor
+still stores the folder each file was last saved in, so open the assembly from this folder and Inventor finds the parts
+beside it.
+
+## Superseded and held runs
+
+Besides the 12 runs of the report, `02_Nastran_Model/` and `04_Runs/` also hold every earlier deck and run of this
+folder. A run that was solved has its deck, solver log, results CSV and convergence history here, and its raw output in the
+release.
+
+| Runs | What they were |
+|---|---|
+| `B0_*`, `B0C_*` | First reference attempt (full stack on rigid halves), superseded by the core model (report Section 6, E-64…E-71) |
+| `B0R_A5.8`, `B1_A5.8`, `B2_A5.8`, `B2m48_A5.8` | Further full-stack variants at 5.8°: decks built, **not run** (no `04_Runs` folder) |
+| `CHK_CORE*`, `CHK_STAB1/2`, `CHK_BLEND`, `CHK_BED`, `CHK_END`, `CHK_GAP*`, `CHK_SLV`, `CHK_FAB4` | Check runs that each tested one fix (report Section 6 table, E-108…E-120) |
+| `*_attemptN_*` folders in `04_Runs` | Earlier attempts of a run that were stopped or rebuilt (the error log explains each one) |
+| `MS3_M1`, `MS3_M2`, `mesh_M1/M2.pkl` | Mesh-study decks on finer meshes M1 / M2 (built, not run) |
+| `_held_real_case/`, `REAL_*`, `RC_*` | Real-case decks (soft tissue, straps, friction 0.37), built and sealed, **not run** |
+| `_held_core_cycles/`, `_dropped_owner_60kPa/` | Cycle decks held back, and the 80 / 100 kPa decks dropped by the 60 kPa limit |
+| `_regen_test/` | Check that the decks rebuild identically |
+| `05_Results/*/v3_B0` | Tables and figures of the superseded B0 attempt |
+
+`scripts/old_versions/` keeps the earlier versions of the scripts that some of these runs were built with. The current
+scripts rebuild the 12 report runs identically (see above).
 
 ## Notes
 

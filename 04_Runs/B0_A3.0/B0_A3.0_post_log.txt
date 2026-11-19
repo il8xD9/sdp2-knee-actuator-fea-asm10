@@ -1,0 +1,4 @@
+﻿B0_A3.0: 2/8 subcases converged
+   1 flex vented to 3.00 deg  th   1.50 p   0.0  M   0.710 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  419.9  it 9 bis 0
+   2 flex vented to 3.00 deg  th   3.00 p   0.0  M   1.239 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  413.7  it 13 bis 0
+FATAL: ['FATAL ERROR E5076: MAXIMUM NUMBER OF BISECTIONS PERMITTED REACHED', 'FATAL ERROR E5076: MAXIMUM NUMBER OF BISECTIONS PERMITTED REACHED          (1)']

@@ -1,0 +1,698 @@
+{
+    "diagnostics": {
+        "fileInfo": [
+            {
+                "filePath": "<PROJECT>\\03_MECHANICAL_DESIGN\\CAD\\LAST V2\\LAST V8\\SIMULATION_3_ASSYMBLY_10\\04_RUNS\\B0_A3.0\\TMP_B0_A3.0\\NDBG78G025436.TMP\\GM18G78G025436.NDB",
+                "fileSize": 5125088
+            },
+            {
+                "filePath": "<PROJECT>\\03_MECHANICAL_DESIGN\\CAD\\LAST V2\\LAST V8\\SIMULATION_3_ASSYMBLY_10\\04_RUNS\\B0_A3.0\\TMP_B0_A3.0\\NDBG78G025436.TMP\\IOYUG78G025436.TMP",
+                "fileSize": 0
+            },
+            {
+                "filePath": "<PROJECT>\\03_MECHANICAL_DESIGN\\CAD\\LAST V2\\LAST V8\\SIMULATION_3_ASSYMBLY_10\\04_RUNS\\B0_A3.0\\TMP_B0_A3.0\\NDBG78G025436.TMP\\LICENSE.LOG",
+                "fileSize": 498
+            },
+            {
+                "filePath": "<PROJECT>\\03_MECHANICAL_DESIGN\\CAD\\LAST V2\\LAST V8\\SIMULATION_3_ASSYMBLY_10\\04_RUNS\\B0_A3.0\\TMP_B0_A3.0\\NDBG78G025436.TMP\\ML12G78G025436.NDB",
+                "fileSize": 772800
+            },
+            {
+                "filePath": "<PROJECT>\\03_MECHANICAL_DESIGN\\CAD\\LAST V2\\LAST V8\\SIMULATION_3_ASSYMBLY_10\\04_RUNS\\B0_A3.0\\TMP_B0_A3.0\\NDBG78G025436.TMP\\ML09G78G025436.NDB",
+                "fileSize": 3604034
+            },
+            {
+                "filePath": "<PROJECT>\\03_MECHANICAL_DESIGN\\CAD\\LAST V2\\LAST V8\\SIMULATION_3_ASSYMBLY_10\\04_RUNS\\B0_A3.0\\TMP_B0_A3.0\\NDBG78G025436.TMP\\ML11G78G025436.NDB",
+                "fileSize": 115920
+            },
+            {
+                "filePath": "<PROJECT>\\03_MECHANICAL_DESIGN\\CAD\\LAST V2\\LAST V8\\SIMULATION_3_ASSYMBLY_10\\04_RUNS\\B0_A3.0\\TMP_B0_A3.0\\NDBG78G025436.TMP\\ML13G78G025436.NDB",
+                "fileSize": 18641600
+            },
+            {
+                "filePath": "<PROJECT>\\03_MECHANICAL_DESIGN\\CAD\\LAST V2\\LAST V8\\SIMULATION_3_ASSYMBLY_10\\04_RUNS\\B0_A3.0\\TMP_B0_A3.0\\NDBG78G025436.TMP\\ML14G78G025436.NDB",
+                "fileSize": 985056
+            },
+            {
+                "filePath": "<PROJECT>\\03_MECHANICAL_DESIGN\\CAD\\LAST V2\\LAST V8\\SIMULATION_3_ASSYMBLY_10\\04_RUNS\\B0_A3.0\\TMP_B0_A3.0\\NDBG78G025436.TMP\\ML15G78G025436.NDB",
+                "fileSize": 1600000
+            },
+            {
+                "filePath": "<PROJECT>\\03_MECHANICAL_DESIGN\\CAD\\LAST V2\\LAST V8\\SIMULATION_3_ASSYMBLY_10\\04_RUNS\\B0_A3.0\\TMP_B0_A3.0\\NDBG78G025436.TMP\\ML16G78G025436.NDB",
+                "fileSize": 22369920
+            },
+            {
+                "filePath": "<PROJECT>\\03_MECHANICAL_DESIGN\\CAD\\LAST V2\\LAST V8\\SIMULATION_3_ASSYMBLY_10\\04_RUNS\\B0_A3.0\\TMP_B0_A3.0\\NDBG78G025436.TMP\\ML17G78G025436.NDB",
+                "fileSize": 154564
+            },
+            {
+                "filePath": "<PROJECT>\\03_MECHANICAL_DESIGN\\CAD\\LAST V2\\LAST V8\\SIMULATION_3_ASSYMBLY_10\\04_RUNS\\B0_A3.0\\TMP_B0_A3.0\\NDBG78G025436.TMP\\pardiso_ooc.cfg",
+                "fileSize": 277
+            },
+            {
+                "filePath": "<PROJECT>\\03_MECHANICAL_DESIGN\\CAD\\LAST V2\\LAST V8\\SIMULATION_3_ASSYMBLY_10\\04_RUNS\\B0_A3.0\\TMP_B0_A3.0\\NDBG78G025436.TMP\\RS28G78G025436.NDB",
+                "fileSize": 59879632
+            },
+            {
+                "filePath": "<PROJECT>\\03_MECHANICAL_DESIGN\\CAD\\LAST V2\\LAST V8\\SIMULATION_3_ASSYMBLY_10\\04_RUNS\\B0_A3.0\\TMP_B0_A3.0\\NDBG78G025436.TMP\\RS29G78G025436.NDB",
+                "fileSize": 12
+            },
+            {
+                "filePath": "<PROJECT>\\03_MECHANICAL_DESIGN\\CAD\\LAST V2\\LAST V8\\SIMULATION_3_ASSYMBLY_10\\04_RUNS\\B0_A3.0\\TMP_B0_A3.0\\NDBG78G025436.TMP\\RS30G78G025436.NDB",
+                "fileSize": 0
+            },
+            {
+                "filePath": "<PROJECT>\\03_MECHANICAL_DESIGN\\CAD\\LAST V2\\LAST V8\\SIMULATION_3_ASSYMBLY_10\\04_RUNS\\B0_A3.0\\TMP_B0_A3.0\\NDBG78G025436.TMP\\SL23G78G025436.NDB",
+                "fileSize": 12402072
+            },
+            {
+                "filePath": "<PROJECT>\\03_MECHANICAL_DESIGN\\CAD\\LAST V2\\LAST V8\\SIMULATION_3_ASSYMBLY_10\\04_RUNS\\B0_A3.0\\TMP_B0_A3.0\\NDBG78G025436.TMP\\SL25G78G025436.NDB",
+                "fileSize": 231840
+            },
+            {
+                "filePath": "<PROJECT>\\03_MECHANICAL_DESIGN\\CAD\\LAST V2\\LAST V8\\SIMULATION_3_ASSYMBLY_10\\04_RUNS\\B0_A3.0\\TMP_B0_A3.0\\NDBG78G025436.TMP\\SL27G78G025436.NDB",
+                "fileSize": 0
+            }
+        ],
+        "fileSpecPath": "<PROJECT>\\03_MECHANICAL_DESIGN\\CAD\\LAST V2\\LAST V8\\SIMULATION_3_ASSYMBLY_10\\04_RUNS\\B0_A3.0\\TMP_B0_A3.0\\NDBG78G025436.TMP\\",
+        "ioErrors": []
+    },
+    "errors": {
+        "count": 1,
+        "data": [
+            {
+                "code": "E5076",
+                "count": 1,
+                "entityType": "Card",
+                "info": [
+                    {
+                        "message": "FATAL ERROR E5076: MAXIMUM NUMBER OF BISECTIONS PERMITTED REACHED",
+                        "recommendation": [
+                            "NLPARM",
+                            "TSTEPNL"
+                        ]
+                    }
+                ],
+                "type": "Error"
+            }
+        ]
+    },
+    "nastranVersion": "20.2.0.23",
+    "schemaVersion": "1.0.1",
+    "warnings": {
+        "count": 6,
+        "data": [
+            {
+                "code": "G3012",
+                "count": 28,
+                "entityType": "Element",
+                "info": [
+                    {
+                        "entityID": 22361,
+                        "location": [
+                            62.05896,
+                            -96.215,
+                            -33.215
+                        ],
+                        "message": "WARNING G3012: QUAD ELEMENT 22361 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22362,
+                        "location": [
+                            63.72693,
+                            -96.215,
+                            -29.8903
+                        ],
+                        "message": "WARNING G3012: QUAD ELEMENT 22362 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22363,
+                        "location": [
+                            65.21693,
+                            -96.215,
+                            -26.4821
+                        ],
+                        "message": "WARNING G3012: QUAD ELEMENT 22363 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22496,
+                        "location": [
+                            83.92907,
+                            92.9302,
+                            -41.1452
+                        ],
+                        "message": "WARNING G3012: QUAD ELEMENT 22496 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22497,
+                        "location": [
+                            85.489,
+                            92.9302,
+                            -37.7974
+                        ],
+                        "message": "WARNING G3012: QUAD ELEMENT 22497 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22498,
+                        "location": [
+                            86.91546,
+                            92.9302,
+                            -34.3906
+                        ],
+                        "message": "WARNING G3012: QUAD ELEMENT 22498 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22499,
+                        "location": [
+                            66.52482,
+                            -96.215,
+                            23.0
+                        ],
+                        "message": "WARNING G3012: QUAD ELEMENT 22499 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22500,
+                        "location": [
+                            65.21693,
+                            -96.215,
+                            26.48212
+                        ],
+                        "message": "WARNING G3012: QUAD ELEMENT 22500 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22501,
+                        "location": [
+                            63.72693,
+                            -96.215,
+                            29.8903
+                        ],
+                        "message": "WARNING G3012: QUAD ELEMENT 22501 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22634,
+                        "location": [
+                            88.20623,
+                            92.9302,
+                            30.9302
+                        ],
+                        "message": "WARNING G3012: QUAD ELEMENT 22634 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22635,
+                        "location": [
+                            86.91546,
+                            92.9302,
+                            34.39067
+                        ],
+                        "message": "WARNING G3012: QUAD ELEMENT 22635 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22636,
+                        "location": [
+                            85.489,
+                            92.9302,
+                            37.79744
+                        ],
+                        "message": "WARNING G3012: QUAD ELEMENT 22636 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22223,
+                        "location": [
+                            91.18433,
+                            -96.7858,
+                            -23.0
+                        ],
+                        "message": "WARNING G3012: TRI ELEMENT 22223 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22244,
+                        "location": [
+                            95.55703,
+                            -96.9275,
+                            -23.0
+                        ],
+                        "message": "WARNING G3012: TRI ELEMENT 22244 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22245,
+                        "location": [
+                            97.89689,
+                            -97.0033,
+                            -22.7694
+                        ],
+                        "message": "WARNING G3012: TRI ELEMENT 22245 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22264,
+                        "location": [
+                            95.55703,
+                            -96.9275,
+                            23.0
+                        ],
+                        "message": "WARNING G3012: TRI ELEMENT 22264 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22327,
+                        "location": [
+                            114.5882,
+                            93.2429,
+                            23.0
+                        ],
+                        "message": "WARNING G3012: TRI ELEMENT 22327 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22328,
+                        "location": [
+                            118.9006,
+                            92.50514,
+                            -23.0
+                        ],
+                        "message": "WARNING G3012: TRI ELEMENT 22328 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22347,
+                        "location": [
+                            121.2081,
+                            92.11037,
+                            22.76942
+                        ],
+                        "message": "WARNING G3012: TRI ELEMENT 22347 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22348,
+                        "location": [
+                            118.9006,
+                            92.50514,
+                            23.0
+                        ],
+                        "message": "WARNING G3012: TRI ELEMENT 22348 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22350,
+                        "location": [
+                            91.18433,
+                            -96.7858,
+                            23.0
+                        ],
+                        "message": "WARNING G3012: TRI ELEMENT 22350 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22351,
+                        "location": [
+                            95.55703,
+                            -96.9275,
+                            -23.0
+                        ],
+                        "message": "WARNING G3012: TRI ELEMENT 22351 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22353,
+                        "location": [
+                            97.89689,
+                            -97.0033,
+                            22.76942
+                        ],
+                        "message": "WARNING G3012: TRI ELEMENT 22353 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22354,
+                        "location": [
+                            95.55703,
+                            -96.9275,
+                            23.0
+                        ],
+                        "message": "WARNING G3012: TRI ELEMENT 22354 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22355,
+                        "location": [
+                            114.5882,
+                            93.2429,
+                            -23.0
+                        ],
+                        "message": "WARNING G3012: TRI ELEMENT 22355 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22357,
+                        "location": [
+                            118.9006,
+                            92.50514,
+                            -23.0
+                        ],
+                        "message": "WARNING G3012: TRI ELEMENT 22357 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22358,
+                        "location": [
+                            121.2081,
+                            92.11037,
+                            -22.7694
+                        ],
+                        "message": "WARNING G3012: TRI ELEMENT 22358 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    },
+                    {
+                        "entityID": 22360,
+                        "location": [
+                            118.9006,
+                            92.50514,
+                            23.0
+                        ],
+                        "message": "WARNING G3012: TRI ELEMENT 22360 HAS A SKEW ANGLE GREATER THAN 65.0"
+                    }
+                ],
+                "type": "Warning"
+            },
+            {
+                "code": "G3015",
+                "count": 16,
+                "entityType": "Element",
+                "info": [
+                    {
+                        "entityID": 22361,
+                        "location": [
+                            62.05896,
+                            -96.215,
+                            -33.215
+                        ],
+                        "message": "WARNING G3015: QUAD ELEMENT 22361 HAS AN INTERIOR ANGLE LESS THAN 25.0"
+                    },
+                    {
+                        "entityID": 22362,
+                        "location": [
+                            63.72693,
+                            -96.215,
+                            -29.8903
+                        ],
+                        "message": "WARNING G3015: QUAD ELEMENT 22362 HAS AN INTERIOR ANGLE LESS THAN 25.0"
+                    },
+                    {
+                        "entityID": 22363,
+                        "location": [
+                            65.21693,
+                            -96.215,
+                            -26.4821
+                        ],
+                        "message": "WARNING G3015: QUAD ELEMENT 22363 HAS AN INTERIOR ANGLE LESS THAN 25.0"
+                    },
+                    {
+                        "entityID": 22496,
+                        "location": [
+                            83.92907,
+                            92.9302,
+                            -41.1452
+                        ],
+                        "message": "WARNING G3015: QUAD ELEMENT 22496 HAS AN INTERIOR ANGLE LESS THAN 25.0"
+                    },
+                    {
+                        "entityID": 22497,
+                        "location": [
+                            85.489,
+                            92.9302,
+                            -37.7974
+                        ],
+                        "message": "WARNING G3015: QUAD ELEMENT 22497 HAS AN INTERIOR ANGLE LESS THAN 25.0"
+                    },
+                    {
+                        "entityID": 22498,
+                        "location": [
+                            86.91546,
+                            92.9302,
+                            -34.3906
+                        ],
+                        "message": "WARNING G3015: QUAD ELEMENT 22498 HAS AN INTERIOR ANGLE LESS THAN 25.0"
+                    },
+                    {
+                        "entityID": 22499,
+                        "location": [
+                            66.52482,
+                            -96.215,
+                            23.0
+                        ],
+                        "message": "WARNING G3015: QUAD ELEMENT 22499 HAS AN INTERIOR ANGLE LESS THAN 25.0"
+                    },
+                    {
+                        "entityID": 22500,
+                        "location": [
+                            65.21693,
+                            -96.215,
+                            26.48212
+                        ],
+                        "message": "WARNING G3015: QUAD ELEMENT 22500 HAS AN INTERIOR ANGLE LESS THAN 25.0"
+                    },
+                    {
+                        "entityID": 22501,
+                        "location": [
+                            63.72693,
+                            -96.215,
+                            29.8903
+                        ],
+                        "message": "WARNING G3015: QUAD ELEMENT 22501 HAS AN INTERIOR ANGLE LESS THAN 25.0"
+                    },
+                    {
+                        "entityID": 22634,
+                        "location": [
+                            88.20623,
+                            92.9302,
+                            30.9302
+                        ],
+                        "message": "WARNING G3015: QUAD ELEMENT 22634 HAS AN INTERIOR ANGLE LESS THAN 25.0"
+                    },
+                    {
+                        "entityID": 22635,
+                        "location": [
+                            86.91546,
+                            92.9302,
+                            34.39067
+                        ],
+                        "message": "WARNING G3015: QUAD ELEMENT 22635 HAS AN INTERIOR ANGLE LESS THAN 25.0"
+                    },
+                    {
+                        "entityID": 22636,
+                        "location": [
+                            85.489,
+                            92.9302,
+                            37.79744
+                        ],
+                        "message": "WARNING G3015: QUAD ELEMENT 22636 HAS AN INTERIOR ANGLE LESS THAN 25.0"
+                    },
+                    {
+                        "entityID": 22244,
+                        "location": [
+                            95.55703,
+                            -96.9275,
+                            -23.0
+                        ],
+                        "message": "WARNING G3015: TRI ELEMENT 22244 HAS AN INTERIOR ANGLE LESS THAN 10.0"
+                    },
+                    {
+                        "entityID": 22348,
+                        "location": [
+                            118.9006,
+                            92.50514,
+                            23.0
+                        ],
+                        "message": "WARNING G3015: TRI ELEMENT 22348 HAS AN INTERIOR ANGLE LESS THAN 10.0"
+                    },
+                    {
+                        "entityID": 22354,
+                        "location": [
+                            95.55703,
+                            -96.9275,
+                            23.0
+                        ],
+                        "message": "WARNING G3015: TRI ELEMENT 22354 HAS AN INTERIOR ANGLE LESS THAN 10.0"
+                    },
+                    {
+                        "entityID": 22357,
+                        "location": [
+                            118.9006,
+                            92.50514,
+                            -23.0
+                        ],
+                        "message": "WARNING G3015: TRI ELEMENT 22357 HAS AN INTERIOR ANGLE LESS THAN 10.0"
+                    }
+                ],
+                "type": "Warning"
+            },
+            {
+                "code": "E5080",
+                "count": 3,
+                "entityType": "Unknown",
+                "info": [
+                    {
+                        "message": "WARNING E5080: EXCESSIVE GRID POINT INCREMENTAL ROTATION(S) DETECTED"
+                    },
+                    {
+                        "message": "WARNING E5080: EXCESSIVE GRID POINT INCREMENTAL ROTATION(S) DETECTED"
+                    },
+                    {
+                        "message": "WARNING E5080: EXCESSIVE GRID POINT INCREMENTAL ROTATION(S) DETECTED"
+                    }
+                ],
+                "type": "Warning"
+            },
+            {
+                "code": "E5075",
+                "count": 16,
+                "entityType": "Unknown",
+                "info": [
+                    {
+                        "message": "WARNING E5075: BISECTING CURRENT LOAD INCREMENT"
+                    },
+                    {
+                        "message": "WARNING E5075: BISECTING CURRENT LOAD INCREMENT"
+                    },
+                    {
+                        "message": "WARNING E5075: BISECTING CURRENT LOAD INCREMENT"
+                    },
+                    {
+                        "message": "WARNING E5075: BISECTING CURRENT LOAD INCREMENT"
+                    },
+                    {
+                        "message": "WARNING E5075: BISECTING CURRENT LOAD INCREMENT"
+                    },
+                    {
+                        "message": "WARNING E5075: BISECTING CURRENT LOAD INCREMENT"
+                    },
+                    {
+                        "message": "WARNING E5075: BISECTING CURRENT LOAD INCREMENT"
+                    },
+                    {
+                        "message": "WARNING E5075: BISECTING CURRENT LOAD INCREMENT"
+                    },
+                    {
+                        "message": "WARNING E5075: BISECTING CURRENT LOAD INCREMENT"
+                    },
+                    {
+                        "message": "WARNING E5075: BISECTING CURRENT LOAD INCREMENT"
+                    },
+                    {
+                        "message": "WARNING E5075: BISECTING CURRENT LOAD INCREMENT"
+                    },
+                    {
+                        "message": "WARNING E5075: BISECTING CURRENT LOAD INCREMENT"
+                    },
+                    {
+                        "message": "WARNING E5075: BISECTING CURRENT LOAD INCREMENT"
+                    },
+                    {
+                        "message": "WARNING E5075: BISECTING CURRENT LOAD INCREMENT"
+                    },
+                    {
+                        "message": "WARNING E5075: BISECTING CURRENT LOAD INCREMENT"
+                    },
+                    {
+                        "message": "WARNING E5075: BISECTING CURRENT LOAD INCREMENT"
+                    }
+                ],
+                "type": "Warning"
+            },
+            {
+                "code": "E5078",
+                "count": 2,
+                "entityType": "Unknown",
+                "info": [
+                    {
+                        "message": "WARNING E5078: SOLUTION HAS DIVERGED"
+                    },
+                    {
+                        "message": "WARNING E5078: SOLUTION HAS DIVERGED"
+                    }
+                ],
+                "type": "Warning"
+            },
+            {
+                "code": "E5074",
+                "count": 12,
+                "entityType": "Card",
+                "info": [
+                    {
+                        "message": "WARNING E5074: NO CONVERGENCE IN MAXIMUM NUMBER OF ITERATIONS PERMITTED",
+                        "recommendation": [
+                            "NLPARM",
+                            "TSTEPNL"
+                        ]
+                    },
+                    {
+                        "message": "WARNING E5074: NO CONVERGENCE IN MAXIMUM NUMBER OF ITERATIONS PERMITTED",
+                        "recommendation": [
+                            "NLPARM",
+                            "TSTEPNL"
+                        ]
+                    },
+                    {
+                        "message": "WARNING E5074: NO CONVERGENCE IN MAXIMUM NUMBER OF ITERATIONS PERMITTED",
+                        "recommendation": [
+                            "NLPARM",
+                            "TSTEPNL"
+                        ]
+                    },
+                    {
+                        "message": "WARNING E5074: NO CONVERGENCE IN MAXIMUM NUMBER OF ITERATIONS PERMITTED",
+                        "recommendation": [
+                            "NLPARM",
+                            "TSTEPNL"
+                        ]
+                    },
+                    {
+                        "message": "WARNING E5074: NO CONVERGENCE IN MAXIMUM NUMBER OF ITERATIONS PERMITTED",
+                        "recommendation": [
+                            "NLPARM",
+                            "TSTEPNL"
+                        ]
+                    },
+                    {
+                        "message": "WARNING E5074: NO CONVERGENCE IN MAXIMUM NUMBER OF ITERATIONS PERMITTED",
+                        "recommendation": [
+                            "NLPARM",
+                            "TSTEPNL"
+                        ]
+                    },
+                    {
+                        "message": "WARNING E5074: NO CONVERGENCE IN MAXIMUM NUMBER OF ITERATIONS PERMITTED",
+                        "recommendation": [
+                            "NLPARM",
+                            "TSTEPNL"
+                        ]
+                    },
+                    {
+                        "message": "WARNING E5074: NO CONVERGENCE IN MAXIMUM NUMBER OF ITERATIONS PERMITTED",
+                        "recommendation": [
+                            "NLPARM",
+                            "TSTEPNL"
+                        ]
+                    },
+                    {
+                        "message": "WARNING E5074: NO CONVERGENCE IN MAXIMUM NUMBER OF ITERATIONS PERMITTED",
+                        "recommendation": [
+                            "NLPARM",
+                            "TSTEPNL"
+                        ]
+                    },
+                    {
+                        "message": "WARNING E5074: NO CONVERGENCE IN MAXIMUM NUMBER OF ITERATIONS PERMITTED",
+                        "recommendation": [
+                            "NLPARM",
+                            "TSTEPNL"
+                        ]
+                    },
+                    {
+                        "message": "WARNING E5074: NO CONVERGENCE IN MAXIMUM NUMBER OF ITERATIONS PERMITTED",
+                        "recommendation": [
+                            "NLPARM",
+                            "TSTEPNL"
+                        ]
+                    },
+                    {
+                        "message": "WARNING E5074: NO CONVERGENCE IN MAXIMUM NUMBER OF ITERATIONS PERMITTED",
+                        "recommendation": [
+                            "NLPARM",
+                            "TSTEPNL"
+                        ]
+                    }
+                ],
+                "type": "Warning"
+            }
+        ]
+    }
+}

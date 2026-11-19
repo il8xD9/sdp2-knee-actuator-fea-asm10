@@ -1,0 +1,31 @@
+subcase,name,kind,frame_pct,time_ms,theta_deg,p_kPa,ninc,thermal
+1,D1 donning (25 % tightening),D,0,0.0,0.0,0.0,10,0.25
+2,D2 pre-tension,D,0,0.0,0.0,0.0,20,True
+3,flex vented to 65.00 deg sub 1/26,S_sub,0,0.0,2.5,0.0,3,True
+4,flex vented to 65.00 deg sub 2/26,S_sub,0,0.0,5.0,0.0,3,True
+5,flex vented to 65.00 deg sub 3/26,S_sub,0,0.0,7.5,0.0,3,True
+6,flex vented to 65.00 deg sub 4/26,S_sub,0,0.0,10.0,0.0,3,True
+7,flex vented to 65.00 deg sub 5/26,S_sub,0,0.0,12.5,0.0,3,True
+8,flex vented to 65.00 deg sub 6/26,S_sub,0,0.0,15.0,0.0,3,True
+9,flex vented to 65.00 deg sub 7/26,S_sub,0,0.0,17.5,0.0,3,True
+10,flex vented to 65.00 deg sub 8/26,S_sub,0,0.0,20.0,0.0,3,True
+11,flex vented to 65.00 deg sub 9/26,S_sub,0,0.0,22.5,0.0,3,True
+12,flex vented to 65.00 deg sub 10/26,S_sub,0,0.0,25.0,0.0,3,True
+13,flex vented to 65.00 deg sub 11/26,S_sub,0,0.0,27.5,0.0,3,True
+14,flex vented to 65.00 deg sub 12/26,S_sub,0,0.0,30.0,0.0,3,True
+15,flex vented to 65.00 deg sub 13/26,S_sub,0,0.0,32.5,0.0,3,True
+16,flex vented to 65.00 deg sub 14/26,S_sub,0,0.0,35.0,0.0,3,True
+17,flex vented to 65.00 deg sub 15/26,S_sub,0,0.0,37.5,0.0,3,True
+18,flex vented to 65.00 deg sub 16/26,S_sub,0,0.0,40.0,0.0,3,True
+19,flex vented to 65.00 deg sub 17/26,S_sub,0,0.0,42.5,0.0,3,True
+20,flex vented to 65.00 deg sub 18/26,S_sub,0,0.0,45.0,0.0,3,True
+21,flex vented to 65.00 deg sub 19/26,S_sub,0,0.0,47.5,0.0,3,True
+22,flex vented to 65.00 deg sub 20/26,S_sub,0,0.0,50.0,0.0,3,True
+23,flex vented to 65.00 deg sub 21/26,S_sub,0,0.0,52.5,0.0,3,True
+24,flex vented to 65.00 deg sub 22/26,S_sub,0,0.0,55.0,0.0,3,True
+25,flex vented to 65.00 deg sub 23/26,S_sub,0,0.0,57.5,0.0,3,True
+26,flex vented to 65.00 deg sub 24/26,S_sub,0,0.0,60.0,0.0,3,True
+27,flex vented to 65.00 deg sub 25/26,S_sub,0,0.0,62.5,0.0,3,True
+28,flex vented to 65.00 deg,S,0,0.0,65.0,0.0,3,True
+29,P 2.4 kPa at 65.00 deg,W,0,0.0,65.0,2.4,4,True
+30,VREF vented at 65.00 deg,VREF,0,0.0,65.0,0.0,4,True

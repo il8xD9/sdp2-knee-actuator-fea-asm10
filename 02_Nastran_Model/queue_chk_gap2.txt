@@ -1,0 +1,2 @@
+# check deck E-64/E-65 fix (crease gap 2.5 mm + no strap pre-tension), 16 Nov 2026
+02_Nastran_Model\CHK_GAP2\CHK_GAP2.nas

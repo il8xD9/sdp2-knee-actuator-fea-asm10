@@ -1,0 +1,1 @@
+﻿CHK_BLEND exit=0 seconds=4662 peakMB=2039 stopped=False start=2026-11-16T06:16:55

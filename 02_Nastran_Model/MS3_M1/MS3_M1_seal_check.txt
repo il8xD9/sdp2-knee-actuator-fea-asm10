@@ -1,0 +1,7 @@
+bladder shell elements 2760 (body 2484, caps 276), edges 5486, free edges 0, edges on >2 elements 0
+  -> closed cavity, no leak path: YES
+PLOAD4 cards 3: SID 1006 p 0.0024 MPa EID 30687 THRU 33446; SID 1007 p 0.01 MPa EID 30687 THRU 33446; SID 1008 p 0.02 MPa EID 30687 THRU 33446
+shell elements inside the PLOAD4 range: 2760, by PSHELL id {8: 2760}
+  -> pressure on all 2760 bladder elements and nothing else: YES
+bladder grid y: -95.10 .. 92.31 mm, mean -2.59; z: -31.91 .. 31.91; x: 74.93 .. 137.63
+  -> symmetric about the knee line y = 0 within 2.79 mm (ends), centred medial-lateral within 0.00 mm

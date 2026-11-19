@@ -1,0 +1,2 @@
+# check deck: slide-line stabilisation 1e-4 (E-108), 16 Nov 2026
+02_Nastran_Model\CHK_STAB2\CHK_STAB2.nas

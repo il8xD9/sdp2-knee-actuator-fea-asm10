@@ -1,0 +1,16 @@
+﻿B0C_P0: 14/52 subcases converged
+   1 D1 donning (25 % tighten th   0.00 p   0.0  M  -2.359 N.m  T tn 1097.98 sn 2272.48 tf 446.07 sf 951.32 N  p_bl 148.86/406.13 kPa  V  423.4  it 11 bis 0
+   2 D2 pre-tension           th   0.00 p   0.0  M -10.164 N.m  T tn 4406.16 sn 9133.09 tf 1787.23 sf 3816.65 N  p_bl 595.86/1630.87 kPa  V  423.4  it 20 bis 0
+   3 F 1% fill                th  -1.92 p   0.0  M -113.653 N.m  T tn 4406.57 sn 9124.84 tf 1787.28 sf 3817.00 N  p_bl 606.50/1634.36 kPa  V  422.9  it 4 bis 0
+   4 F 2% fill                th  -1.24 p   0.0  M -76.489 N.m  T tn 4406.54 sn 9128.49 tf 1787.28 sf 3817.02 N  p_bl 601.61/1629.89 kPa  V  423.1  it 4 bis 0
+   5 F 3% fill                th  -0.76 p   0.0  M -50.739 N.m  T tn 4406.53 sn 9130.90 tf 1787.28 sf 3817.02 N  p_bl 598.17/1631.00 kPa  V  423.3  it 4 bis 0
+   6 F 4% fill                th  -0.44 p   0.0  M -33.588 N.m  T tn 4406.52 sn 9132.48 tf 1787.28 sf 3817.01 N  p_bl 597.02/1631.73 kPa  V  423.3  it 4 bis 0
+   7 F 5% fill                th  -0.20 p   0.0  M -20.727 N.m  T tn 4406.51 sn 9133.66 tf 1787.28 sf 3817.01 N  p_bl 596.53/1632.29 kPa  V  423.4  it 4 bis 0
+   8 F 6% fill                th   0.01 p   0.0  M  -9.475 N.m  T tn 4406.50 sn 9134.68 tf 1787.28 sf 3817.01 N  p_bl 596.22/1632.76 kPa  V  423.4  it 4 bis 0
+   9 F 7% fill                th   0.24 p   0.0  M   2.848 N.m  T tn 4406.49 sn 9135.79 tf 1787.28 sf 3817.01 N  p_bl 595.91/1633.27 kPa  V  423.4  it 4 bis 0
+  10 F 8% fill                th   0.52 p   0.0  M  17.833 N.m  T tn 4406.48 sn 9137.12 tf 1787.28 sf 3817.01 N  p_bl 595.67/1633.89 kPa  V  423.4  it 4 bis 0
+  11 F 9% fill                th   0.88 p   0.0  M  37.055 N.m  T tn 4406.45 sn 9138.82 tf 1787.28 sf 3817.01 N  p_bl 596.53/1634.66 kPa  V  423.4  it 4 bis 0
+  12 F 10% fill               th   1.34 p   0.0  M  61.484 N.m  T tn 4406.42 sn 9140.95 tf 1787.28 sf 3817.01 N  p_bl 597.95/1635.65 kPa  V  423.2  it 4 bis 0
+  13 F 11% fill               th   1.92 p   0.0  M  91.795 N.m  T tn 4406.37 sn 9143.59 tf 1787.28 sf 3817.01 N  p_bl 600.52/1636.89 kPa  V  422.9  it 4 bis 0
+  14 F 12% fill               th   2.59 p   0.0  M 120.597 N.m  T tn 4406.32 sn 9146.76 tf 1787.28 sf 3817.03 N  p_bl 608.98/1642.07 kPa  V  422.2  it 5 bis 0
+FATAL: ['FATAL ERROR E5076: MAXIMUM NUMBER OF BISECTIONS PERMITTED REACHED', 'FATAL ERROR E5076: MAXIMUM NUMBER OF BISECTIONS PERMITTED REACHED        (1)']

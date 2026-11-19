@@ -1,0 +1,103 @@
+{
+ "contracted": {
+  "thigh_near": -68.554,
+  "shank_near": -67.012,
+  "thigh_far": -45.464,
+  "shank_far": -88.44
+ },
+ "relaxed": {
+  "thigh_far": -30.0,
+  "thigh_near": -30.0,
+  "shank_near": -30.0,
+  "shank_far": -30.0
+ },
+ "history": [
+  {
+   "tissue": "contracted",
+   "ring": "thigh_near",
+   "dT": -37.323,
+   "T": 8.922897,
+   "target": 20.89
+  },
+  {
+   "tissue": "contracted",
+   "ring": "shank_near",
+   "dT": -74.594,
+   "T": 27.40343,
+   "target": 19.59
+  },
+  {
+   "tissue": "contracted",
+   "ring": "thigh_far",
+   "dT": -32.96,
+   "T": 12.189043,
+   "target": 13.3
+  },
+  {
+   "tissue": "contracted",
+   "ring": "shank_far",
+   "dT": -61.969,
+   "T": 6.03229,
+   "target": 9.4
+  },
+  {
+   "tissue": "contracted",
+   "ring": "thigh_near",
+   "dT": -87.379,
+   "T": 28.103256,
+   "target": 20.89
+  },
+  {
+   "tissue": "contracted",
+   "ring": "shank_near",
+   "dT": -53.325,
+   "T": 5.485432,
+   "target": 19.59
+  },
+  {
+   "tissue": "contracted",
+   "ring": "thigh_far",
+   "dT": -35.964,
+   "T": 12.455951,
+   "target": 13.3
+  },
+  {
+   "tissue": "contracted",
+   "ring": "shank_far",
+   "dT": -96.565,
+   "T": 10.433706,
+   "target": 9.4
+  }
+ ],
+ "note": "history reset 13 Nov 04:40: earlier points (dK, SMOKE_K) used other contact penalties (E-30); first production CAL run updates proportionally",
+ "old_history": [
+  {
+   "tissue": "contracted",
+   "ring": "thigh_near",
+   "dT": -30.0,
+   "T": 16.791331,
+   "target": 20.89
+  },
+  {
+   "tissue": "contracted",
+   "ring": "shank_near",
+   "dT": -30.0,
+   "T": 7.8787,
+   "target": 19.59
+  },
+  {
+   "tissue": "contracted",
+   "ring": "thigh_far",
+   "dT": -30.0,
+   "T": 12.105591,
+   "target": 13.3
+  },
+  {
+   "tissue": "contracted",
+   "ring": "shank_far",
+   "dT": -30.0,
+   "T": 4.550653,
+   "target": 9.4
+  }
+ ]
+}

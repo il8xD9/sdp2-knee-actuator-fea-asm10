@@ -1,0 +1,4 @@
+﻿CHK_SLV: 2/5 subcases converged
+   1 flex vented to 3.28 deg  th   1.64 p   0.0  M  12.816 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  419.6  it 6 bis 0
+   2 flex vented to 3.28 deg  th   3.28 p   0.0  M  23.708 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  415.2  it 6 bis 0
+FATAL: ['FATAL ERROR E5076: MAXIMUM NUMBER OF BISECTIONS PERMITTED REACHED', 'FATAL ERROR E5076: MAXIMUM NUMBER OF BISECTIONS PERMITTED REACHED          (1)']

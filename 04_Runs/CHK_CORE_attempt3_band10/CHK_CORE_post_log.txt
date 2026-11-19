@@ -1,0 +1,23 @@
+﻿python.exe : Traceback (most recent call last):
+At <PROJECT>\03_Mechanical_Design\CAD\last v2\last 
+v8\simulation_3_assymbly_10\scripts\run_queue.ps1:83 char:9
++         & $py -P (Join-Path $PSScriptRoot "post_a07.py") (Join-Path $ ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<PROJECT>\03_Mechanical_Design\CAD\last v2\last 
+v8\simulation_3_assymbly_10\scripts\post_a07.py", line 471, in <module>
+    main(sys.argv[1], quick="--quick" in sys.argv)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<PROJECT>\03_Mechanical_Design\CAD\last v2\last 
+v8\simulation_3_assymbly_10\scripts\post_a07.py", line 349, in main
+    maps(rows, pmaps, dmaps, pos, S, EL, outdir, name)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<PROJECT>\03_Mechanical_Design\CAD\last v2\last 
+v8\simulation_3_assymbly_10\scripts\post_a07.py", line 447, in maps
+    sc = ax[0].scatter(th, yy, c=np.clip(pv, 0, np.percentile(pv, 99.5) if pv.max() > 0 else 1), s=6, cmap="viridis")
+                                                                           ~~~~~~^^
+  File "<TEMP>", line 41, in _amax
+    return umr_maximum(a, axis, None, out, keepdims, initial, where)
+ValueError: zero-size array to reduction operation maximum which has no identity

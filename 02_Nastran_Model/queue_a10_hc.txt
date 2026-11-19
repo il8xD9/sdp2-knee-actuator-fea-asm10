@@ -1,0 +1,16 @@
+# HC = fixed hand-calc reference (D-A10-FIX/STAB/ENDISO/FBOND), 16 Nov 2026. Cycles <= 60 kPa first, then angle cases, then 80/100 kPa cycles.
+# HC_A3.0 last: its deck is identical to CHK_FB (already run, 0-60 kPa converged).
+02_Nastran_Model\HCC_P0\HCC_P0.nas
+02_Nastran_Model\HCC_P20\HCC_P20.nas
+02_Nastran_Model\HCC_PROJ\HCC_PROJ.nas
+02_Nastran_Model\HCC_P40\HCC_P40.nas
+02_Nastran_Model\HCC_P60\HCC_P60.nas
+02_Nastran_Model\HC_A7.3\HC_A7.3.nas
+02_Nastran_Model\HC_A8.6\HC_A8.6.nas
+02_Nastran_Model\HC_A9.8\HC_A9.8.nas
+02_Nastran_Model\HC_A13.0\HC_A13.0.nas
+02_Nastran_Model\HC_A16.0\HC_A16.0.nas
+02_Nastran_Model\HC_A19.0\HC_A19.0.nas
+02_Nastran_Model\HCC_P80\HCC_P80.nas
+02_Nastran_Model\HCC_P100\HCC_P100.nas
+02_Nastran_Model\HC_A3.0\HC_A3.0.nas

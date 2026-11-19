@@ -1,0 +1,6 @@
+subcase,name,kind,frame_pct,time_ms,theta_deg,p_kPa,ninc,thermal
+1,flex vented to 3.28 deg sub 1/2,S_sub,0,0.0,1.64,0.0,3,True
+2,flex vented to 3.28 deg,S,0,0.0,3.28,0.0,3,True
+3,P 20 kPa at 3.28 deg,W,0,0.0,3.28,20.0,4,True
+4,P 40 kPa at 3.28 deg,W,0,0.0,3.28,40.0,4,True
+5,VREF vented at 3.28 deg,VREF,0,0.0,3.28,0.0,4,True

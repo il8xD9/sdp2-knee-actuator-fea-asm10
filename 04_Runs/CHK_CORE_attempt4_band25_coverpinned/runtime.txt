@@ -1,0 +1,1 @@
+﻿CHK_CORE exit=0 seconds=331 peakMB=1729 stopped=False start=2026-11-16T01:14:41

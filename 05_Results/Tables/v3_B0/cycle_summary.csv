@@ -1,0 +1,15 @@
+family,run,status,M_device_21pct_Nm,M_hc_21pct_Nm,ratio_21pct,M_device_window_max_Nm
+B0C,B0C_P0,17/24 window frames,0.0,0.0,,0.0
+B0C,B0C_P20,not run,,,,
+B0C,B0C_P40,0/24 window frames,,8.2796,,
+B0C,B0C_P60,0/24 window frames,,12.4194,,
+B0C,B0C_P80,not run,,,,
+B0C,B0C_P100,not run,,,,
+B0C,B0C_PROJ,2/24 window frames,,4.1398,,3.1728650000000003
+RC,RC_P0,not run,,,,
+RC,RC_P20,not run,,,,
+RC,RC_P40,not run,,,,
+RC,RC_P60,not run,,,,
+RC,RC_P80,not run,,,,
+RC,RC_P100,not run,,,,
+RC,RC_PROJ,not run,,,,

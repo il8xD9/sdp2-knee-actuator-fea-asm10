@@ -1,0 +1,914 @@
+
+ADS NASTRAN VERSION 20.2.0.23   03:36  11/16/26                                 
+MODEL DATABASE IDENTIFICATION NUMBER: 01F52F020896                              
+
+NUMBER OF PROCESSOR THREADS REQUESTED =    4                                    
+NUMBER OF PROCESSOR THREADS AVAILABLE =    8                                    
+NUMBER OF PROCESSOR THREADS USED      =    4                                    
+
+CONDITIONAL NUMERICAL REPRODUCIBILITY = ENABLED                                 
+
+NASTRAN PROCESS PRIORITY = NORMAL                                               
+                                                                                
+                                                                                
+LICENSE STATUS                                                                  
+                                                                                
+AVAILABLE ANALYSIS SOLUTIONS = LINEAR STATIC                                    
+                               PRESTRESS STATIC                        
+                               NONLINEAR STATIC                        
+                               MODAL                                   
+                               MODAL COMPLEX EIGENVALUE                
+                               LINEAR PRESTRESS MODAL                  
+                               NONLINEAR PRESTRESS MODAL               
+                               LINEAR PRESTRESS COMPLEX EIGENVALUE     
+                               NONLINEAR PRESTRESS COMPLEX EIGENVALUE  
+                               LINEAR BUCKLING                         
+                               NONLINEAR BUCKLING                      
+                               MODAL TRANSIENT RESPONSE                
+                               DIRECT TRANSIENT RESPONSE               
+                               NONLINEAR TRANSIENT RESPONSE            
+                               LINEAR PRESTRESS TRANSIENT RESPONSE     
+                               NONLINEAR PRESTRESS TRANSIENT RESPONSE  
+                               MODAL FREQUENCY RESPONSE                
+                               DIRECT FREQUENCY RESPONSE               
+                               LINEAR PRESTRESS FREQUENCY RESPONSE     
+                               NONLINEAR PRESTRESS FREQUENCY RESPONSE  
+                               LINEAR STEADY STATE HEAT TRANSFER       
+                               NONLINEAR STEADY STATE HEAT TRANSFER    
+                               NONLINEAR TRANSIENT HEAT TRANSFER       
+                               MATRIX REDUCTION                        
+                                                                                
+REMAINING SOLUTION LICENSE TIME = 303 DAYS                                      
+                                                                                
+                                                                                
+AVAILABLE RESULTS TRANSLATORS = NORAN BINARY                                    
+                                NORAN ASCII                             
+                                PATRAN BINARY                           
+                                PATRAN ASCII                            
+                                FEMAP BINARY                            
+                                FEMAP ASCII                             
+                                NASTRAN BINARY                          
+                                                                                
+REMAINING TRANSLATOR LICENSE TIME = 303 DAYS                                    
+                                                                                
+                                                                                
+AVAILABLE ANALYSIS FEATURES = MULTIAXIAL FATIGUE                                
+                              DYNAMIC FATIGUE                         
+                              VIBRATION FATIGUE                       
+                              PROGRESSIVE PLY FAILURE                 
+                              MCT PLY FAILURE                         
+                              EDITOR OPTIMIZATION                     
+                              AMLS INTERFACE                          
+                              BOUNDARY ACOUSTIC ANALYSIS              
+                              TOPOLOGY OPTIMIZATION                   
+                              PROGRESSIVE FAILURE ANALYSIS            
+                              ADVANCED MATERIAL EXCHANGE              
+                                                                                
+REMAINING FEATURE LICENSE TIME = 303 DAYS                                       
+                                                                                
+                                                                                
+MAXIMUM MODEL SIZE = NO LIMITS                                                  
+                                                                                
+
+VIRTUAL MEMORY =  1544458240 WORDS     11783.3 MEGABYTES                        
+REAL MEMORY    =   229374976 WORDS      1750.0 MEGABYTES                        
+
+DRIVE C: DISK SPACE =    18130865152 WORDS    138327.5 MEGABYTES                
+
+GENERATING DATABASE:  B0_A8.6.NDB                                               
+
+207 CASE CONTROL COMMANDS WERE RECOGNIZED OF A TOTAL OF 207 READ IN             
+
+31423 BULK DATA ENTRIES WERE RECOGNIZED OF A TOTAL OF 31423 READ IN             
+
+MAXIMUM CONTACT ALLOWABLE PENETRATION DISTANCE = 3.3521E+01                     
+                                                                                
+MODEL DATABASE SIZE                                                             
+                                                                                
+SUBCASES                     =       10                                         
+COORDINATE SYSTEMS           =        1                                         
+GRID POINTS                  =     4830                                         
+ELEMENTS                     =   233020                                         
+ELEMENT PROPERTIES           =       12                                         
+MATERIAL PROPERTIES          =       10                                         
+SINGLE POINT CONSTRAINTS     =    18816                                         
+GRID POINT TEMPERATURES      =     9660                                         
+ELEMENT PRESSURES            =    10260                                         
+SETS                         =      119                                         
+SURFACES                     =        1                                         
+                                                                                
+
+MODULE SEQUENCE FOR SOLUTION: NONLINEAR STATIC                                  
+
+MODEL SIZE    =       28980 DEGREES OF FREEDOM                                  
+MATRIX SIZE   =     3100516 WORDS       23.7 MEGABYTES                          
+SEMIBANDWIDTH =         728 WORDS                                               
+
+SURFACE CONTACT GEOMETRY STATISTICS                                             
+
+CONTACT SURFACE 1                                                               
+
+NUMBER OF CONTACT SEGMENTS = 780                                                
+CONTACT SURFACE AREA       = 5.5515E+02                                         
+
+CONTACT SURFACE 2                                                               
+
+NUMBER OF CONTACT SEGMENTS = 5069                                               
+CONTACT SURFACE AREA       = 1.4903E+03                                         
+
+CONTACT SURFACE 3                                                               
+
+NUMBER OF CONTACT SEGMENTS = 4661                                               
+CONTACT SURFACE AREA       = 1.4296E+03                                         
+
+CONTACT SURFACE 4                                                               
+
+NUMBER OF CONTACT SEGMENTS = 2090                                               
+CONTACT SURFACE AREA       = 1.1326E+03                                         
+
+CONTACT SURFACE 5                                                               
+
+NUMBER OF CONTACT SEGMENTS = 1835                                               
+CONTACT SURFACE AREA       = 1.1326E+03                                         
+
+CONTACT SURFACE 6                                                               
+
+NUMBER OF CONTACT SEGMENTS = 4661                                               
+CONTACT SURFACE AREA       = 1.4296E+03                                         
+
+CONTACT SURFACE 7                                                               
+
+NUMBER OF CONTACT SEGMENTS = 5069                                               
+CONTACT SURFACE AREA       = 1.4903E+03                                         
+
+CONTACT SURFACE 8                                                               
+
+NUMBER OF CONTACT SEGMENTS = 959                                                
+CONTACT SURFACE AREA       = 5.1469E+02                                         
+
+CONTACT SURFACE 9                                                               
+
+NUMBER OF CONTACT SEGMENTS = 419                                                
+CONTACT SURFACE AREA       = 3.2039E+02                                         
+
+CONTACT SURFACE 10                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2411                                               
+CONTACT SURFACE AREA       = 1.3362E+03                                         
+
+CONTACT SURFACE 11                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2591                                               
+CONTACT SURFACE AREA       = 1.3623E+03                                         
+
+CONTACT SURFACE 12                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2303                                               
+CONTACT SURFACE AREA       = 1.1969E+03                                         
+
+CONTACT SURFACE 13                                                              
+
+NUMBER OF CONTACT SEGMENTS = 1919                                               
+CONTACT SURFACE AREA       = 1.1969E+03                                         
+
+CONTACT SURFACE 14                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2591                                               
+CONTACT SURFACE AREA       = 1.3623E+03                                         
+
+CONTACT SURFACE 15                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2411                                               
+CONTACT SURFACE AREA       = 1.3362E+03                                         
+
+CONTACT SURFACE 16                                                              
+
+NUMBER OF CONTACT SEGMENTS = 503                                                
+CONTACT SURFACE AREA       = 3.2039E+02                                         
+
+CONTACT SURFACE 17                                                              
+
+NUMBER OF CONTACT SEGMENTS = 399                                                
+CONTACT SURFACE AREA       = 3.6573E+02                                         
+
+CONTACT SURFACE 18                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2447                                               
+CONTACT SURFACE AREA       = 1.4338E+03                                         
+
+CONTACT SURFACE 19                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2411                                               
+CONTACT SURFACE AREA       = 1.2766E+03                                         
+
+CONTACT SURFACE 20                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2015                                               
+CONTACT SURFACE AREA       = 1.0728E+03                                         
+
+CONTACT SURFACE 21                                                              
+
+NUMBER OF CONTACT SEGMENTS = 1679                                               
+CONTACT SURFACE AREA       = 1.0728E+03                                         
+
+CONTACT SURFACE 22                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2411                                               
+CONTACT SURFACE AREA       = 1.2766E+03                                         
+
+CONTACT SURFACE 23                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2447                                               
+CONTACT SURFACE AREA       = 1.4338E+03                                         
+
+CONTACT SURFACE 24                                                              
+
+NUMBER OF CONTACT SEGMENTS = 479                                                
+CONTACT SURFACE AREA       = 3.6573E+02                                         
+
+CONTACT SURFACE 25                                                              
+
+NUMBER OF CONTACT SEGMENTS = 419                                                
+CONTACT SURFACE AREA       = 3.4986E+02                                         
+
+CONTACT SURFACE 26                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2078                                               
+CONTACT SURFACE AREA       = 1.3745E+03                                         
+
+CONTACT SURFACE 27                                                              
+
+NUMBER OF CONTACT SEGMENTS = 1949                                               
+CONTACT SURFACE AREA       = 1.3246E+03                                         
+
+CONTACT SURFACE 28                                                              
+
+NUMBER OF CONTACT SEGMENTS = 1679                                               
+CONTACT SURFACE AREA       = 1.1201E+03                                         
+
+CONTACT SURFACE 29                                                              
+
+NUMBER OF CONTACT SEGMENTS = 1399                                               
+CONTACT SURFACE AREA       = 1.1201E+03                                         
+
+CONTACT SURFACE 30                                                              
+
+NUMBER OF CONTACT SEGMENTS = 1949                                               
+CONTACT SURFACE AREA       = 1.3246E+03                                         
+
+CONTACT SURFACE 31                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2078                                               
+CONTACT SURFACE AREA       = 1.3745E+03                                         
+
+CONTACT SURFACE 32                                                              
+
+NUMBER OF CONTACT SEGMENTS = 503                                                
+CONTACT SURFACE AREA       = 3.4986E+02                                         
+
+CONTACT SURFACE 33                                                              
+
+NUMBER OF CONTACT SEGMENTS = 539                                                
+CONTACT SURFACE AREA       = 3.7450E+02                                         
+
+CONTACT SURFACE 34                                                              
+
+NUMBER OF CONTACT SEGMENTS = 3001                                               
+CONTACT SURFACE AREA       = 1.3663E+03                                         
+
+CONTACT SURFACE 35                                                              
+
+NUMBER OF CONTACT SEGMENTS = 3783                                               
+CONTACT SURFACE AREA       = 1.2858E+03                                         
+
+CONTACT SURFACE 36                                                              
+
+NUMBER OF CONTACT SEGMENTS = 3839                                               
+CONTACT SURFACE AREA       = 1.1350E+03                                         
+
+CONTACT SURFACE 37                                                              
+
+NUMBER OF CONTACT SEGMENTS = 3199                                               
+CONTACT SURFACE AREA       = 1.1350E+03                                         
+
+CONTACT SURFACE 38                                                              
+
+NUMBER OF CONTACT SEGMENTS = 3783                                               
+CONTACT SURFACE AREA       = 1.2858E+03                                         
+
+CONTACT SURFACE 39                                                              
+
+NUMBER OF CONTACT SEGMENTS = 3001                                               
+CONTACT SURFACE AREA       = 1.3663E+03                                         
+
+CONTACT SURFACE 40                                                              
+
+NUMBER OF CONTACT SEGMENTS = 647                                                
+CONTACT SURFACE AREA       = 3.7450E+02                                         
+
+CONTACT SURFACE 41                                                              
+
+NUMBER OF CONTACT SEGMENTS = 479                                                
+CONTACT SURFACE AREA       = 3.2266E+02                                         
+
+CONTACT SURFACE 42                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2879                                               
+CONTACT SURFACE AREA       = 1.2636E+03                                         
+
+CONTACT SURFACE 43                                                              
+
+NUMBER OF CONTACT SEGMENTS = 3402                                               
+CONTACT SURFACE AREA       = 1.3345E+03                                         
+
+CONTACT SURFACE 44                                                              
+
+NUMBER OF CONTACT SEGMENTS = 3279                                               
+CONTACT SURFACE AREA       = 1.2383E+03                                         
+
+CONTACT SURFACE 45                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2719                                               
+CONTACT SURFACE AREA       = 1.2383E+03                                         
+
+CONTACT SURFACE 46                                                              
+
+NUMBER OF CONTACT SEGMENTS = 3402                                               
+CONTACT SURFACE AREA       = 1.3345E+03                                         
+
+CONTACT SURFACE 47                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2879                                               
+CONTACT SURFACE AREA       = 1.2636E+03                                         
+
+CONTACT SURFACE 48                                                              
+
+NUMBER OF CONTACT SEGMENTS = 575                                                
+CONTACT SURFACE AREA       = 3.2266E+02                                         
+
+CONTACT SURFACE 49                                                              
+
+NUMBER OF CONTACT SEGMENTS = 419                                                
+CONTACT SURFACE AREA       = 3.3103E+02                                         
+
+CONTACT SURFACE 50                                                              
+
+NUMBER OF CONTACT SEGMENTS = 1903                                               
+CONTACT SURFACE AREA       = 1.2376E+03                                         
+
+CONTACT SURFACE 51                                                              
+
+NUMBER OF CONTACT SEGMENTS = 1829                                               
+CONTACT SURFACE AREA       = 1.3636E+03                                         
+
+CONTACT SURFACE 52                                                              
+
+NUMBER OF CONTACT SEGMENTS = 1455                                               
+CONTACT SURFACE AREA       = 1.2695E+03                                         
+
+CONTACT SURFACE 53                                                              
+
+NUMBER OF CONTACT SEGMENTS = 1231                                               
+CONTACT SURFACE AREA       = 1.2695E+03                                         
+
+CONTACT SURFACE 54                                                              
+
+NUMBER OF CONTACT SEGMENTS = 1829                                               
+CONTACT SURFACE AREA       = 1.3636E+03                                         
+
+CONTACT SURFACE 55                                                              
+
+NUMBER OF CONTACT SEGMENTS = 1903                                               
+CONTACT SURFACE AREA       = 1.2376E+03                                         
+
+CONTACT SURFACE 56                                                              
+
+NUMBER OF CONTACT SEGMENTS = 503                                                
+CONTACT SURFACE AREA       = 3.3103E+02                                         
+
+CONTACT SURFACE 57                                                              
+
+NUMBER OF CONTACT SEGMENTS = 399                                                
+CONTACT SURFACE AREA       = 3.3172E+02                                         
+
+CONTACT SURFACE 58                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2012                                               
+CONTACT SURFACE AREA       = 1.2136E+03                                         
+
+CONTACT SURFACE 59                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2344                                               
+CONTACT SURFACE AREA       = 1.3559E+03                                         
+
+CONTACT SURFACE 60                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2267                                               
+CONTACT SURFACE AREA       = 1.2934E+03                                         
+
+CONTACT SURFACE 61                                                              
+
+NUMBER OF CONTACT SEGMENTS = 1889                                               
+CONTACT SURFACE AREA       = 1.2934E+03                                         
+
+CONTACT SURFACE 62                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2344                                               
+CONTACT SURFACE AREA       = 1.3559E+03                                         
+
+CONTACT SURFACE 63                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2012                                               
+CONTACT SURFACE AREA       = 1.2136E+03                                         
+
+CONTACT SURFACE 64                                                              
+
+NUMBER OF CONTACT SEGMENTS = 479                                                
+CONTACT SURFACE AREA       = 3.3172E+02                                         
+
+CONTACT SURFACE 65                                                              
+
+NUMBER OF CONTACT SEGMENTS = 419                                                
+CONTACT SURFACE AREA       = 2.8273E+02                                         
+
+CONTACT SURFACE 66                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2099                                               
+CONTACT SURFACE AREA       = 1.1612E+03                                         
+
+CONTACT SURFACE 67                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2345                                               
+CONTACT SURFACE AREA       = 1.3307E+03                                         
+
+CONTACT SURFACE 68                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2087                                               
+CONTACT SURFACE AREA       = 1.1453E+03                                         
+
+CONTACT SURFACE 69                                                              
+
+NUMBER OF CONTACT SEGMENTS = 1739                                               
+CONTACT SURFACE AREA       = 1.1453E+03                                         
+
+CONTACT SURFACE 70                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2345                                               
+CONTACT SURFACE AREA       = 1.3307E+03                                         
+
+CONTACT SURFACE 71                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2099                                               
+CONTACT SURFACE AREA       = 1.1612E+03                                         
+
+CONTACT SURFACE 72                                                              
+
+NUMBER OF CONTACT SEGMENTS = 503                                                
+CONTACT SURFACE AREA       = 2.8273E+02                                         
+
+CONTACT SURFACE 73                                                              
+
+NUMBER OF CONTACT SEGMENTS = 779                                                
+CONTACT SURFACE AREA       = 5.1619E+02                                         
+
+CONTACT SURFACE 74                                                              
+
+NUMBER OF CONTACT SEGMENTS = 4535                                               
+CONTACT SURFACE AREA       = 1.3216E+03                                         
+
+CONTACT SURFACE 75                                                              
+
+NUMBER OF CONTACT SEGMENTS = 3359                                               
+CONTACT SURFACE AREA       = 1.1487E+03                                         
+
+CONTACT SURFACE 76                                                              
+
+NUMBER OF CONTACT SEGMENTS = 1109                                               
+CONTACT SURFACE AREA       = 8.5891E+02                                         
+
+CONTACT SURFACE 77                                                              
+
+NUMBER OF CONTACT SEGMENTS = 998                                                
+CONTACT SURFACE AREA       = 8.5891E+02                                         
+
+CONTACT SURFACE 78                                                              
+
+NUMBER OF CONTACT SEGMENTS = 3359                                               
+CONTACT SURFACE AREA       = 1.1487E+03                                         
+
+CONTACT SURFACE 79                                                              
+
+NUMBER OF CONTACT SEGMENTS = 4535                                               
+CONTACT SURFACE AREA       = 1.3216E+03                                         
+
+CONTACT SURFACE 80                                                              
+
+NUMBER OF CONTACT SEGMENTS = 959                                                
+CONTACT SURFACE AREA       = 4.7573E+02                                         
+
+CONTACT SURFACE 81                                                              
+
+NUMBER OF CONTACT SEGMENTS = 383                                                
+CONTACT SURFACE AREA       = 3.6043E+02                                         
+
+CONTACT SURFACE 82                                                              
+
+NUMBER OF CONTACT SEGMENTS = 2911                                               
+CONTACT SURFACE AREA       = 9.6218E+02                                         
+
+CONTACT SURFACE 83                                                              
+
+NUMBER OF CONTACT SEGMENTS = 3359                                               
+CONTACT SURFACE AREA       = 9.6218E+02                                         
+
+CONTACT SURFACE 84                                                              
+
+NUMBER OF CONTACT SEGMENTS = 383                                                
+CONTACT SURFACE AREA       = 3.6043E+02                                         
+
+CONTACT SURFACE 85                                                              
+
+NUMBER OF CONTACT SEGMENTS = 755                                                
+CONTACT SURFACE AREA       = 6.0197E+02                                         
+
+CONTACT SURFACE 86                                                              
+
+NUMBER OF CONTACT SEGMENTS = 3401                                               
+CONTACT SURFACE AREA       = 1.4742E+03                                         
+
+CONTACT SURFACE 87                                                              
+
+NUMBER OF CONTACT SEGMENTS = 3968                                               
+CONTACT SURFACE AREA       = 1.4742E+03                                         
+
+CONTACT SURFACE 88                                                              
+
+NUMBER OF CONTACT SEGMENTS = 755                                                
+CONTACT SURFACE AREA       = 6.0197E+02                                         
+
+CONTACT SURFACE 89                                                              
+
+NUMBER OF CONTACT SEGMENTS = 629                                                
+CONTACT SURFACE AREA       = 5.4191E+02                                         
+
+CONTACT SURFACE 90                                                              
+
+NUMBER OF CONTACT SEGMENTS = 3023                                               
+CONTACT SURFACE AREA       = 1.4183E+03                                         
+
+CONTACT SURFACE 91                                                              
+
+NUMBER OF CONTACT SEGMENTS = 3527                                               
+CONTACT SURFACE AREA       = 1.4183E+03                                         
+
+CONTACT SURFACE 92                                                              
+
+NUMBER OF CONTACT SEGMENTS = 629                                                
+CONTACT SURFACE AREA       = 5.4191E+02                                         
+
+CONTACT SURFACE 93                                                              
+
+NUMBER OF CONTACT SEGMENTS = 524                                                
+CONTACT SURFACE AREA       = 3.9121E+02                                         
+
+CONTACT SURFACE 94                                                              
+
+NUMBER OF CONTACT SEGMENTS = 3023                                               
+CONTACT SURFACE AREA       = 1.2238E+03                                         
+
+CONTACT SURFACE 95                                                              
+
+NUMBER OF CONTACT SEGMENTS = 3527                                               
+CONTACT SURFACE AREA       = 1.2238E+03                                         
+
+CONTACT SURFACE 96                                                              
+
+NUMBER OF CONTACT SEGMENTS = 524                                                
+CONTACT SURFACE AREA       = 3.9121E+02                                         
+
+CONTACT SURFACE 97                                                              
+
+NUMBER OF CONTACT SEGMENTS = 599                                                
+CONTACT SURFACE AREA       = 3.9477E+02                                         
+
+CONTACT SURFACE 98                                                              
+
+NUMBER OF CONTACT SEGMENTS = 3167                                               
+CONTACT SURFACE AREA       = 1.2428E+03                                         
+
+CONTACT SURFACE 99                                                              
+
+NUMBER OF CONTACT SEGMENTS = 3671                                               
+CONTACT SURFACE AREA       = 1.2428E+03                                         
+
+CONTACT SURFACE 100                                                             
+
+NUMBER OF CONTACT SEGMENTS = 599                                                
+CONTACT SURFACE AREA       = 3.9477E+02                                         
+
+CONTACT SURFACE 101                                                             
+
+NUMBER OF CONTACT SEGMENTS = 539                                                
+CONTACT SURFACE AREA       = 5.4315E+02                                         
+
+CONTACT SURFACE 102                                                             
+
+NUMBER OF CONTACT SEGMENTS = 2951                                               
+CONTACT SURFACE AREA       = 1.4446E+03                                         
+
+CONTACT SURFACE 103                                                             
+
+NUMBER OF CONTACT SEGMENTS = 3455                                               
+CONTACT SURFACE AREA       = 1.4446E+03                                         
+
+CONTACT SURFACE 104                                                             
+
+NUMBER OF CONTACT SEGMENTS = 539                                                
+CONTACT SURFACE AREA       = 5.4315E+02                                         
+
+CONTACT SURFACE 105                                                             
+
+NUMBER OF CONTACT SEGMENTS = 755                                                
+CONTACT SURFACE AREA       = 5.9218E+02                                         
+
+CONTACT SURFACE 106                                                             
+
+NUMBER OF CONTACT SEGMENTS = 3401                                               
+CONTACT SURFACE AREA       = 1.4845E+03                                         
+
+CONTACT SURFACE 107                                                             
+
+NUMBER OF CONTACT SEGMENTS = 3968                                               
+CONTACT SURFACE AREA       = 1.4845E+03                                         
+
+CONTACT SURFACE 108                                                             
+
+NUMBER OF CONTACT SEGMENTS = 755                                                
+CONTACT SURFACE AREA       = 5.9217E+02                                         
+
+CONTACT SURFACE 109                                                             
+
+NUMBER OF CONTACT SEGMENTS = 383                                                
+CONTACT SURFACE AREA       = 3.5085E+02                                         
+
+CONTACT SURFACE 110                                                             
+
+NUMBER OF CONTACT SEGMENTS = 2911                                               
+CONTACT SURFACE AREA       = 9.6415E+02                                         
+
+CONTACT SURFACE 111                                                             
+
+NUMBER OF CONTACT SEGMENTS = 3359                                               
+CONTACT SURFACE AREA       = 9.6415E+02                                         
+
+CONTACT SURFACE 112                                                             
+
+NUMBER OF CONTACT SEGMENTS = 383                                                
+CONTACT SURFACE AREA       = 3.5085E+02                                         
+
+TOTAL CONTACT SURFACE AREA = 1.1115E+05                                         
+
+MAXIMUM PENETRATION DISTANCE = 3.8604E-03                                       
+MAXIMUM SLIP DISTANCE        = 3.8604E-03                                       
+
+INITIAL MAXIMUM CONTACT SURFACE PENETRATION  =  0.0000E+00  AT GRID 23060       
+INITIAL MAXIMUM CONTACT SURFACE PROTRUSION   =  2.1450E+01  AT GRID 23080       
+
+UPDATED MAXIMUM CONTACT SURFACE PENETRATION  =  0.0000E+00  AT GRID 23060       
+UPDATED MAXIMUM CONTACT SURFACE PROTRUSION   =  2.1450E+01  AT GRID 23080       
+
+CONTACT STABILIZATION STIFFNESS ADDED    = 9.1910E-10                           
+NUMBER OF GRID POINTS WITH STABILIZATION = 4146                                 
+
+AVAILABLE VIRTUAL MEMORY  =  1406508544 WORDS     10730.8 MEGABYTES             
+AVAILABLE PHYSICAL MEMORY =   152176640 WORDS      1161.0 MEGABYTES             
+
+DRIVE C: DISK SPACE =    18121161728 WORDS    138253.5 MEGABYTES                
+
+WARNING G3012: QUAD ELEMENT 22361 HAS A SKEW ANGLE GREATER THAN 65.0            
+
+WARNING G3015: QUAD ELEMENT 22361 HAS AN INTERIOR ANGLE LESS THAN 25.0          
+
+WARNING G3012: QUAD ELEMENT 22362 HAS A SKEW ANGLE GREATER THAN 65.0            
+
+WARNING G3015: QUAD ELEMENT 22362 HAS AN INTERIOR ANGLE LESS THAN 25.0          
+
+WARNING G3012: QUAD ELEMENT 22363 HAS A SKEW ANGLE GREATER THAN 65.0            
+
+WARNING G3015: QUAD ELEMENT 22363 HAS AN INTERIOR ANGLE LESS THAN 25.0          
+
+WARNING G3012: QUAD ELEMENT 22496 HAS A SKEW ANGLE GREATER THAN 65.0            
+
+WARNING G3015: QUAD ELEMENT 22496 HAS AN INTERIOR ANGLE LESS THAN 25.0          
+
+WARNING G3012: QUAD ELEMENT 22497 HAS A SKEW ANGLE GREATER THAN 65.0            
+
+WARNING G3015: QUAD ELEMENT 22497 HAS AN INTERIOR ANGLE LESS THAN 25.0          
+
+WARNING G3012: QUAD ELEMENT 22498 HAS A SKEW ANGLE GREATER THAN 65.0            
+
+WARNING G3015: QUAD ELEMENT 22498 HAS AN INTERIOR ANGLE LESS THAN 25.0          
+
+WARNING G3012: QUAD ELEMENT 22499 HAS A SKEW ANGLE GREATER THAN 65.0            
+
+WARNING G3015: QUAD ELEMENT 22499 HAS AN INTERIOR ANGLE LESS THAN 25.0          
+
+WARNING G3012: QUAD ELEMENT 22500 HAS A SKEW ANGLE GREATER THAN 65.0            
+
+WARNING G3015: QUAD ELEMENT 22500 HAS AN INTERIOR ANGLE LESS THAN 25.0          
+
+WARNING G3012: QUAD ELEMENT 22501 HAS A SKEW ANGLE GREATER THAN 65.0            
+
+WARNING G3015: QUAD ELEMENT 22501 HAS AN INTERIOR ANGLE LESS THAN 25.0          
+
+WARNING G3012: QUAD ELEMENT 22634 HAS A SKEW ANGLE GREATER THAN 65.0            
+
+WARNING G3015: QUAD ELEMENT 22634 HAS AN INTERIOR ANGLE LESS THAN 25.0          
+
+WARNING G3012: QUAD ELEMENT 22635 HAS A SKEW ANGLE GREATER THAN 65.0            
+
+WARNING G3015: QUAD ELEMENT 22635 HAS AN INTERIOR ANGLE LESS THAN 25.0          
+
+WARNING G3012: QUAD ELEMENT 22636 HAS A SKEW ANGLE GREATER THAN 65.0            
+
+WARNING G3015: QUAD ELEMENT 22636 HAS AN INTERIOR ANGLE LESS THAN 25.0          
+
+WARNING G3012: TRI ELEMENT 22223 HAS A SKEW ANGLE GREATER THAN 65.0             
+
+WARNING G3012: TRI ELEMENT 22244 HAS A SKEW ANGLE GREATER THAN 65.0             
+
+WARNING G3015: TRI ELEMENT 22244 HAS AN INTERIOR ANGLE LESS THAN 10.0           
+
+WARNING G3012: TRI ELEMENT 22245 HAS A SKEW ANGLE GREATER THAN 65.0             
+
+WARNING G3012: TRI ELEMENT 22264 HAS A SKEW ANGLE GREATER THAN 65.0             
+
+WARNING G3012: TRI ELEMENT 22327 HAS A SKEW ANGLE GREATER THAN 65.0             
+
+WARNING G3012: TRI ELEMENT 22328 HAS A SKEW ANGLE GREATER THAN 65.0             
+
+WARNING G3012: TRI ELEMENT 22347 HAS A SKEW ANGLE GREATER THAN 65.0             
+
+WARNING G3012: TRI ELEMENT 22348 HAS A SKEW ANGLE GREATER THAN 65.0             
+
+WARNING G3015: TRI ELEMENT 22348 HAS AN INTERIOR ANGLE LESS THAN 10.0           
+
+WARNING G3012: TRI ELEMENT 22350 HAS A SKEW ANGLE GREATER THAN 65.0             
+
+WARNING G3012: TRI ELEMENT 22351 HAS A SKEW ANGLE GREATER THAN 65.0             
+
+WARNING G3012: TRI ELEMENT 22353 HAS A SKEW ANGLE GREATER THAN 65.0             
+
+WARNING G3012: TRI ELEMENT 22354 HAS A SKEW ANGLE GREATER THAN 65.0             
+
+WARNING G3015: TRI ELEMENT 22354 HAS AN INTERIOR ANGLE LESS THAN 10.0           
+
+WARNING G3012: TRI ELEMENT 22355 HAS A SKEW ANGLE GREATER THAN 65.0             
+
+WARNING G3012: TRI ELEMENT 22357 HAS A SKEW ANGLE GREATER THAN 65.0             
+
+WARNING G3015: TRI ELEMENT 22357 HAS AN INTERIOR ANGLE LESS THAN 10.0           
+
+WARNING G3012: TRI ELEMENT 22358 HAS A SKEW ANGLE GREATER THAN 65.0             
+
+WARNING G3012: TRI ELEMENT 22360 HAS A SKEW ANGLE GREATER THAN 65.0             
+
+ELEMENT GEOMETRY STATISTICS                                                     
+
+MAXIMUM QUAD ELEMENT WARPING ANGLE  =   8.68 DEGREES ON ELEMENT 22501           
+MAXIMUM QUAD ELEMENT SKEW ANGLE     =  70.24 DEGREES ON ELEMENT 22501           
+MAXIMUM QUAD ELEMENT INTERIOR ANGLE = 159.98 DEGREES ON ELEMENT 22501           
+MINIMUM QUAD ELEMENT INTERIOR ANGLE =  19.69 DEGREES ON ELEMENT 22361           
+
+MAXIMUM QUAD ELEMENT TAPER RATIO  =   0.33 ON ELEMENT 20509                     
+MAXIMUM QUAD ELEMENT ASPECT RATIO =   3.38 ON ELEMENT 22188                     
+
+MAXIMUM TRI ELEMENT SKEW ANGLE     =  76.65 DEGREES ON ELEMENT 22348            
+MAXIMUM TRI ELEMENT INTERIOR ANGLE = 158.99 DEGREES ON ELEMENT 22354            
+MINIMUM TRI ELEMENT INTERIOR ANGLE =   9.74 DEGREES ON ELEMENT 22348            
+
+MAXIMUM TRI ELEMENT ASPECT RATIO =   9.39 ON ELEMENT 22348                      
+
+SURFACE CONTACT STIFFNESS STATISTICS                                            
+
+INITIAL CONTACT SURFACE NORMAL STIFFNESS     =  1.4811E+00                      
+INITIAL CONTACT SURFACE TRANSVERSE STIFFNESS =  1.4811E-01                      
+
+GLOBAL STIFFNESS MATRIX ASSEMBLY STATISTICS                                     
+
+SPARSE MATRIX SIZE =    3100516 WORDS       23.7 MEGABYTES                      
+MEMORY ALLOCATED   =    4650774 WORDS       35.5 MEGABYTES                      
+
+MAXIMUM GLOBAL STIFFNESS MATRIX TERM ZEROED =  9.9426E-16                       
+MINIMUM GLOBAL STIFFNESS MATRIX TERM ZEROED =  0.0000E+00                       
+REDUCTION IN GLOBAL STIFFNESS MATRIX SIZE   =  78.04 PERCENT                    
+
+ASSEMBLY TIME FOR 233020 ELEMENTS = 2.02 SECONDS                                
+
+TOTAL MASS = 9.868609E-05                                                       
+
+MASS DISTRIBUTION BY TYPE                                                       
+
+STRUCTURAL MASS    =  9.868609E-05                                              
+NONSTRUCTURAL MASS =  0.000000E+00                                              
+CONCENTRATED MASS  =  0.000000E+00                                              
+OTHER MASS         =  0.000000E+00                                              
+
+CENTER OF MASS RELATIVE TO ORIGIN OF BASIC SYSTEM                               
+                                                                                
+X-COORDINATE =  1.034991E+02                                                    
+Y-COORDINATE = -1.976168E+00                                                    
+Z-COORDINATE =  2.583461E-05                                                    
+
+MAXIMUM STIFFNESS MATRIX DIAGONAL =  2.0310E+03  AT GRID 26777 COMPONENT 3      
+MINIMUM STIFFNESS MATRIX DIAGONAL =  0.0000E+00  AT GRID 16512 COMPONENT 6      
+
+AVAILABLE VIRTUAL MEMORY  =  1279101440 WORDS      9758.8 MEGABYTES             
+AVAILABLE PHYSICAL MEMORY =    35365888 WORDS       269.8 MEGABYTES             
+
+DRIVE C: DISK SPACE =    18106429440 WORDS    138141.1 MEGABYTES                
+
+GLOBAL STIFFNESS MATRIX FACTORIZATION STATISTICS                                
+
+NUMBER OF NEGATIVE TERMS ON FACTOR DIAGONAL = 0                                 
+MAXIMUM MATRIX FACTOR DIAGONAL RATIO = 1.498E+03 AT GRID 25754 COMPONENT 4      
+
+REORDERING METHOD REQUESTED = AUTO                                              
+REORDERING METHOD USED      = VRM7                                              
+
+FACTORED SPARSE MATRIX SIZE =        6270969 WORDS       95.7 MEGABYTES         
+ADDITIONAL MEMORY ALLOCATED =        7321088 WORDS       55.9 MEGABYTES         
+
+FACTORIZATION TIME FOR 6270969 WORDS = 0.47 SECONDS                             
+
+NONLINEAR SOLUTION SEQUENCE FOR SUBCASE 1                                       
+
+LOAD LEVEL FOR SUBCASE 1 AT 33.333 PERCENT                                      
+
+ASSEMBLING GLOBAL LOAD VECTOR FOR INCREMENT 1                                   
+
+MAXIMUM APPLIED INCREMENTAL FORCE MAGNITUDE  =  0.000000E+00  AT GRID 26777     
+MAXIMUM APPLIED INCREMENTAL MOMENT MAGNITUDE =  0.000000E+00  AT GRID 26777     
+
+SOLVING FOR DISPLACEMENTS FOR INCREMENT 1  ITERATION 1                          
+
+MAXIMUM INCREMENTAL DISPLACEMENT MAGNITUDE =  1.582021E+00  AT GRID 23094       
+MAXIMUM INCREMENTAL ROTATION MAGNITUDE     =  2.717267E-02  AT GRID 14067       
+MAXIMUM TOTAL DISPLACEMENT MAGNITUDE       =  1.582021E+00  AT GRID 23094       
+MAXIMUM TOTAL ROTATION MAGNITUDE           =  2.717267E-02  AT GRID 14067       
+
+ASSEMBLING GLOBAL LOAD VECTOR FOR INCREMENT 1                                   
+
+PERCENT OF TOTAL CONTACT ELEMENTS ACTIVE  = 1.8                                 
+PERCENT OF ACTIVE CONTACT ELEMENTS CLOSED = 0.0                                 
+
+MAXIMUM RESIDUAL INCREMENTAL FORCE INDEX  =  2.233131E-01  AT GRID 14067        
+MAXIMUM RESIDUAL INCREMENTAL MOMENT INDEX =  1.000000E+00  AT GRID 10473        
+
+PERFORMING STIFFNESS MATRIX UPDATE                                              
+
+GLOBAL STIFFNESS MATRIX ASSEMBLY STATISTICS                                     
+
+SPARSE MATRIX SIZE =    3100516 WORDS       23.7 MEGABYTES                      
+MEMORY ALLOCATED   =    4650774 WORDS       35.5 MEGABYTES                      
+
+ASSEMBLY TIME FOR 233020 ELEMENTS = 1.73 SECONDS                                
+
+AVAILABLE VIRTUAL MEMORY  =  1257714688 WORDS      9595.6 MEGABYTES             
+AVAILABLE PHYSICAL MEMORY =   157551616 WORDS      1202.0 MEGABYTES             
+
+DRIVE C: DISK SPACE =    18112531456 WORDS    138187.7 MEGABYTES                
+
+FACTORIZING GLOBAL STIFFNESS MATRIX FOR INCREMENT 1  ITERATION 1                
+
+GLOBAL STIFFNESS MATRIX FACTORIZATION STATISTICS                                
+
+NUMBER OF NEGATIVE TERMS ON FACTOR DIAGONAL = 0                                 
+MAXIMUM MATRIX FACTOR DIAGONAL RATIO = 1.931E+03 AT GRID 26693 COMPONENT 1      
+
+REORDERING METHOD REQUESTED = AUTO                                              
+REORDERING METHOD USED      = VRM7                                              
+
+FACTORED SPARSE MATRIX SIZE =        9051821 WORDS      138.1 MEGABYTES         
+ADDITIONAL MEMORY ALLOCATED =       11043840 WORDS       84.3 MEGABYTES         
+
+FACTORIZATION TIME FOR 9051821 WORDS = 0.50 SECONDS                             
+
+LOAD LEVEL FOR SUBCASE 1 AT 33.333 PERCENT                                      
+
+SOLVING FOR DISPLACEMENTS FOR INCREMENT 1  ITERATION 2                          
+
+MAXIMUM INCREMENTAL DISPLACEMENT MAGNITUDE =  5.912190E-02  AT GRID 13203       
+MAXIMUM INCREMENTAL ROTATION MAGNITUDE     =  3.941956E-03  AT GRID 13923       
+MAXIMUM TOTAL DISPLACEMENT MAGNITUDE       =  1.585903E+00  AT GRID 23094       
+MAXIMUM TOTAL ROTATION MAGNITUDE           =  2.762885E-02  AT GRID 14067       
+
+ASSEMBLING GLOBAL LOAD VECTOR FOR INCREMENT 1                                   
+
+PERCENT OF TOTAL CONTACT ELEMENTS ACTIVE  = 1.8                                 
+PERCENT OF ACTIVE CONTACT ELEMENTS CLOSED = 0.0                                 
+
+MAXIMUM RESIDUAL INCREMENTAL FORCE INDEX  =  4.487411E-03  AT GRID 26005        
+MAXIMUM RESIDUAL INCREMENTAL MOMENT INDEX =  1.000000E+00  AT GRID 13923        
+
+PERFORMING STIFFNESS MATRIX UPDATE                                              

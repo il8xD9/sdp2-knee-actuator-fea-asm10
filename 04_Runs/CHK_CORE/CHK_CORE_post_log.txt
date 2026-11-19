@@ -1,0 +1,6 @@
+﻿CHK_CORE: 4/5 subcases converged
+   1 flex vented to 5.78 deg  th   1.93 p   0.0  M   0.869 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  418.8  it 11 bis 0
+   2 flex vented to 5.78 deg  th   3.85 p   0.0  M   1.462 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  407.8  it 17 bis 0
+   3 flex vented to 5.78 deg  th   5.78 p   0.0  M   1.807 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  391.3  it 26 bis 0
+   4 P 20 kPa at 5.78 deg     th   5.78 p  20.0  M   7.001 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  453.8  it 133 bis 4
+FATAL: ['FATAL ERROR E5076: MAXIMUM NUMBER OF BISECTIONS PERMITTED REACHED', 'FATAL ERROR E5076: MAXIMUM NUMBER OF BISECTIONS PERMITTED REACHED          (1)']

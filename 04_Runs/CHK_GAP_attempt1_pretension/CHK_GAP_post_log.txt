@@ -1,0 +1,5 @@
+﻿CHK_GAP: 3/7 subcases converged
+   1 D1 donning (25 % tighten th   0.00 p   0.0  M   1.288 N.m  T tn 1098.85 sn 2274.22 tf 446.36 sf 951.98 N  p_bl 155.02/405.69 kPa  V  423.4  it 11 bis 0
+   2 D2 pre-tension           th   0.00 p   0.0  M   4.898 N.m  T tn 4409.60 sn 9139.66 tf 1788.39 sf 3819.26 N  p_bl 621.06/1629.62 kPa  V  423.4  it 20 bis 0
+   3 flex vented to 5.78 deg  th   1.93 p   0.0  M  33.634 N.m  T tn 4409.96 sn 9155.84 tf 1788.44 sf 3819.62 N  p_bl 614.25/1635.16 kPa  V  422.8  it 6 bis 0
+FATAL: ['FATAL ERROR E5076: MAXIMUM NUMBER OF BISECTIONS PERMITTED REACHED', 'FATAL ERROR E5076: MAXIMUM NUMBER OF BISECTIONS PERMITTED REACHED        (1)']

@@ -1,0 +1,2 @@
+# a10 queue 5 (16 Nov 2026): re-runs after queue_a10_4 - B0C_P20 with the E-69 fill-at-onset sequence (B0C_PROJb only if B0C_PROJ fails)
+02_Nastran_Model\B0C_P20\B0C_P20.nas

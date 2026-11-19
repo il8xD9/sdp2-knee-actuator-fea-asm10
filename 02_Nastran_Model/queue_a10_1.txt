@@ -1,0 +1,26 @@
+# SUPERSEDED 15 Nov 2026 by queue_a10_2.txt (owner-confirmed cycle and cases) - kept for the record, not to be launched
+# a10 queue 1 (full asseymbly 10, last v8 side vents; decks = v3 queue 1 of simulation_2_assymbly_7, bulk data identical, TITLE a10), one Nastran job at a time, written 15 Nov 2026 - launch only on the owner's "start"
+# 1 hand-calc reference (rigid halves, bonded, stiff pad): matrix row 5.8 deg + pressure sweep to 200 kPa
+02_Nastran_Model\B0_A5.8\B0_A5.8.nas
+# 2 B0' = B0 + cover body/caps |y| >= 40 mm turning with the halves (Model-B cavity assumption)
+02_Nastran_Model\B0R_A5.8\B0R_A5.8.nas
+# 3-4 ladder B1 (soft contracted tissue), B2 (+ real pad E 0.0965); B3 = CHK_FAB4 (reuse)
+02_Nastran_Model\B1_A5.8\B1_A5.8.nas
+02_Nastran_Model\B2_A5.8\B2_A5.8.nas
+# 5 real case (= CHK_FAB4 model) 5.8 deg, 2.4..200 kPa sweep
+02_Nastran_Model\REAL_A5.8\REAL_A5.8.nas
+# 6-8 B0 matrix rows
+02_Nastran_Model\B0_A3.3\B0_A3.3.nas
+02_Nastran_Model\B0_A0.7\B0_A0.7.nas
+02_Nastran_Model\B0_A10.4\B0_A10.4.nas
+# 9 mesh study B0 on M1
+02_Nastran_Model\MS3_M1\MS3_M1.nas
+# 10 ladder option mu = 0.48 (v12 mu_req), real pad, not bonded
+02_Nastran_Model\B2m48_A5.8\B2m48_A5.8.nas
+# 11-12 real-case matrix rows
+02_Nastran_Model\REAL_A3.3\REAL_A3.3.nas
+02_Nastran_Model\REAL_A0.7\REAL_A0.7.nas
+# 13 mesh study B0 on M2
+02_Nastran_Model\MS3_M2\MS3_M2.nas
+# 14 real case, vented flexion to 65 deg (swing check) + 2.4 kPa residual - risky, last
+02_Nastran_Model\REAL_A65\REAL_A65.nas

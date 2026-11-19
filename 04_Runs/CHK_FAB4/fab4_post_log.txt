@@ -1,0 +1,8 @@
+﻿fab4: 7/7 subcases converged
+   1 D1 donning (25 % tighten th   0.00 p   0.0  M  -0.036 N.m  T tn   3.17 sn   6.05 tf   3.59 sf   2.21 N  p_bl   0.45/  2.09 kPa  V  423.4  it 16 bis 0
+   2 D2 pre-tension           th   0.00 p   0.0  M  -0.048 N.m  T tn  11.21 sn  24.92 tf  12.47 sf   7.15 N  p_bl   1.78/  7.42 kPa  V  422.0  it 20 bis 0
+   3 flex vented to 5.78 deg  th   1.93 p   0.0  M   5.000 N.m  T tn   8.31 sn  18.84 tf   9.82 sf   3.77 N  p_bl   1.78/  7.35 kPa  V  421.2  it 6 bis 0
+   4 flex vented to 5.78 deg  th   3.85 p   0.0  M   9.825 N.m  T tn   7.43 sn  16.65 tf   8.72 sf   3.68 N  p_bl   1.83/  7.24 kPa  V  420.7  it 6 bis 0
+   5 flex vented to 5.78 deg  th   5.78 p   0.0  M  14.750 N.m  T tn   7.59 sn  17.69 tf   8.19 sf   2.72 N  p_bl   1.92/ 13.65 kPa  V  420.2  it 6 bis 0
+   6 W 21% inflate 20 kPa     th   5.78 p  20.0  M  14.645 N.m  T tn   6.68 sn  17.19 tf   8.12 sf   1.76 N  p_bl   2.02/ 13.49 kPa  V  472.2  it 15 bis 2
+   7 VREF vented at 5.78 deg  th   5.78 p   0.0  M  14.551 N.m  T tn   7.04 sn  15.99 tf   8.09 sf   1.91 N  p_bl   1.91/ 13.35 kPa  V  438.5  it 5 bis 1

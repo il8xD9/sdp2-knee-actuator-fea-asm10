@@ -1,0 +1,15 @@
+# a10 queue 3 (16 Nov 2026): real case, decks in the hold folder - launch only on the owner answer (D-A10-HOLD); angle cases 3 / 7.28 / 8.63 / 9.78 / 13 / 16 / 19 deg
+02_Nastran_Model\_held_real_case\RC_P0\RC_P0.nas
+02_Nastran_Model\_held_real_case\RC_P20\RC_P20.nas
+02_Nastran_Model\_held_real_case\RC_PROJ\RC_PROJ.nas
+02_Nastran_Model\_held_real_case\RC_P40\RC_P40.nas
+02_Nastran_Model\_held_real_case\RC_P60\RC_P60.nas
+02_Nastran_Model\_held_real_case\RC_P80\RC_P80.nas
+02_Nastran_Model\_held_real_case\RC_P100\RC_P100.nas
+02_Nastran_Model\_held_real_case\REAL_A3.0\REAL_A3.0.nas
+02_Nastran_Model\_held_real_case\REAL_A7.3\REAL_A7.3.nas
+02_Nastran_Model\_held_real_case\REAL_A8.6\REAL_A8.6.nas
+02_Nastran_Model\_held_real_case\REAL_A9.8\REAL_A9.8.nas
+02_Nastran_Model\_held_real_case\REAL_A13.0\REAL_A13.0.nas
+02_Nastran_Model\_held_real_case\REAL_A16.0\REAL_A16.0.nas
+02_Nastran_Model\_held_real_case\REAL_A19.0\REAL_A19.0.nas

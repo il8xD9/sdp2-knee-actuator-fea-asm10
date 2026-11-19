@@ -1,0 +1,2 @@
+# check deck: CHK_END + rigid floor bed 1 mm (E-117), 16 Nov 2026
+02_Nastran_Model\CHK_BED\CHK_BED.nas

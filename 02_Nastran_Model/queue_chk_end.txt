@@ -1,0 +1,2 @@
+# check deck: stabilisation 1e-4 + continuous support + isotropic cover end walls (E-108/E-109/E-112), 16 Nov 2026
+02_Nastran_Model\CHK_END\CHK_END.nas

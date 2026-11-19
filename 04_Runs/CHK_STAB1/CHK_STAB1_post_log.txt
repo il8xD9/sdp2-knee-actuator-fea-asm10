@@ -1,0 +1,5 @@
+﻿CHK_STAB1: 3/8 subcases converged
+   1 flex vented to 3.00 deg  th   1.50 p   0.0  M   3.131 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  418.8  it 10 bis 0
+   2 flex vented to 3.00 deg  th   3.00 p   0.0  M   6.158 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  413.8  it 13 bis 0
+   3 P 20 kPa at 3.00 deg     th   3.00 p  20.0  M  15.871 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  441.6  it 28 bis 1
+FATAL: ['FATAL ERROR E5076: MAXIMUM NUMBER OF BISECTIONS PERMITTED REACHED', 'FATAL ERROR E5076: MAXIMUM NUMBER OF BISECTIONS PERMITTED REACHED          (1)']

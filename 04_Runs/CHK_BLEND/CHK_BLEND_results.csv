@@ -1,0 +1,9 @@
+subcase,name,kind,frame,ms,theta,p_kPa,converged,increments,iterations,bisections,M_knee_ext_Nm,M_thigh_Nm,Fshank_x_N,Fshank_y_N,Fshank_z_N,Fthigh_x_N,Fthigh_y_N,vm_max_bladder_MPa,vm_max_cover_MPa,vm_max_cover_flange_MPa,vm_max_hooks_MPa,vm_max_rings_MPa,vm_max_tabs_MPa,p_under_bladder_mean_kPa,p_under_bladder_peak_kPa,F_under_bladder_N,p_posterior_knee_mean_kPa,p_posterior_knee_peak_kPa,F_posterior_knee_N,skin_contact_force_total_N,V_bladder_mid_cm3,ESE_total_mJ
+1,flex vented to 3.00 deg sub 1/2,S_sub,0,0.0,1.5,0.0,True,3,10,0,0.78268,-0.783471,-0.778749,-8.090181,-0.00724,0.778242,8.090182,0.048549,1.01762,1.43647,nan,nan,nan,nan,0.0,0,nan,0.0,0,0,419.767687,nan
+2,flex vented to 3.00 deg,S,0,0.0,3.0,0.0,True,3,14,0,1.489516,-1.492535,-1.329886,-15.21914,-0.018181,1.334193,15.219052,0.094412,2.40664,2.87845,nan,nan,nan,nan,0.0,0,nan,0.0,0,0,415.247034,nan
+3,P 20 kPa at 3.00 deg,W,0,0.0,3.0,20.0,True,4,48,2,6.332859,-6.270118,-3.98147,-65.404859,-0.279265,3.978969,65.404613,0.539779,5.78745,5.86957,nan,nan,nan,nan,0.0,0,nan,0.0,0,0,459.83852,nan
+4,P 40 kPa at 3.00 deg,W,0,0.0,3.0,40.0,True,4,57,1,10.891348,-10.82698,-7.132025,-114.010979,-0.217814,7.132148,114.010412,0.810894,9.62115,8.86673,nan,nan,nan,nan,0.0,0,nan,0.0,0,0,482.464472,nan
+5,P 60 kPa at 3.00 deg,W,0,0.0,3.0,60.0,True,4,87,2,16.122499,-15.781535,-14.976995,-166.03703,-0.08028,14.655685,166.051879,1.23235,14.4428,12.6662,nan,nan,nan,nan,0.0,0,nan,0.0,0,0,505.726287,nan
+6,P 80 kPa at 3.00 deg,W,0,0.0,3.0,80.0,False,1,33,11,,,,,,,,,,,,,,,,,,,,,,
+7,P 100 kPa at 3.00 deg,W,0,0.0,3.0,100.0,False,0,0,0,,,,,,,,,,,,,,,,,,,,,,
+8,VREF vented at 3.00 deg,VREF,0,0.0,3.0,0.0,False,0,0,0,,,,,,,,,,,,,,,,,,,,,,

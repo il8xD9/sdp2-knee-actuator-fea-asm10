@@ -1,0 +1,16 @@
+﻿B0C_PROJ: 14/50 subcases converged
+   1 F 1% fill                th  -1.92 p   0.5  M  -0.843 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  438.6  it 11 bis 0
+   2 F 2% fill                th  -1.24 p   1.1  M  -0.443 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  442.3  it 7 bis 0
+   3 F 3% fill                th  -0.76 p   1.6  M  -0.125 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  444.6  it 8 bis 0
+   4 F 4% fill                th  -0.44 p   2.1  M   0.126 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  446.3  it 36 bis 1
+   5 F 5% fill                th  -0.20 p   2.7  M   0.343 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  447.6  it 25 bis 0
+   6 F 6% fill                th   0.01 p   3.2  M   0.553 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  448.5  it 27 bis 1
+   7 F 7% fill                th   0.24 p   3.7  M   0.771 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  449.2  it 27 bis 1
+   8 F 8% fill                th   0.52 p   4.2  M   1.034 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  449.5  it 23 bis 0
+   9 F 9% fill                th   0.88 p   4.8  M   1.333 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  449.4  it 32 bis 1
+  10 F 10% fill               th   1.34 p   5.3  M   1.677 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  448.7  it 28 bis 1
+  11 F 11% fill               th   1.92 p   5.8  M   2.065 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  447.6  it 8 bis 0
+  12 F 12% fill               th   2.59 p   6.4  M   2.488 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  445.9  it 7 bis 0
+  13 W 13%                    th   3.28 p   6.9  M   2.908 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  444.1  it 32 bis 1
+  14 W 14%                    th   3.93 p  13.0  M   4.654 N.m  T tn    nan sn    nan tf    nan sf    nan N  p_bl    nan/  0.00 kPa  V  453.5  it 107 bis 3
+FATAL: ['FATAL ERROR E5076: MAXIMUM NUMBER OF BISECTIONS PERMITTED REACHED', 'FATAL ERROR E5076: MAXIMUM NUMBER OF BISECTIONS PERMITTED REACHED          (1)']

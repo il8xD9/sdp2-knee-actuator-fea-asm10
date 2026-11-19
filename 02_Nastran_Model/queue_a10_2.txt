@@ -1,0 +1,26 @@
+# a10 queue 2 (15 Nov 2026, owner-confirmed cycle, decisions_2026-11-15 D-A10-CYC/CASES) - replaces queue_a10_1 - launch only on the owner's "start"
+# one Nastran job at a time. Cycle = stance 1-50 %: fill from heel strike, window 13-36 % at the test pressure (vents closed), vent to 2.4 kPa by 50 %.
+# 1-7 hand-calc-matching idealised reference (rigid leg halves on the knee axis, bonded, stiff pad); P0 = vented reference for the device moment
+02_Nastran_Model\B0C_P0\B0C_P0.nas
+02_Nastran_Model\B0C_P20\B0C_P20.nas
+02_Nastran_Model\B0C_PROJ\B0C_PROJ.nas
+02_Nastran_Model\B0C_P40\B0C_P40.nas
+02_Nastran_Model\B0C_P60\B0C_P60.nas
+02_Nastran_Model\B0C_P80\B0C_P80.nas
+02_Nastran_Model\B0C_P100\B0C_P100.nas
+# 8-10 margin angles (window angles + 4 deg) at 20-100 kPa, idealised reference
+02_Nastran_Model\B0_A7.3\B0_A7.3.nas
+02_Nastran_Model\B0_A8.6\B0_A8.6.nas
+02_Nastran_Model\B0_A9.8\B0_A9.8.nas
+# 11-17 real case (soft contracted tissue, mu 0.37, real pad), same cycles
+02_Nastran_Model\RC_P0\RC_P0.nas
+02_Nastran_Model\RC_P20\RC_P20.nas
+02_Nastran_Model\RC_PROJ\RC_PROJ.nas
+02_Nastran_Model\RC_P40\RC_P40.nas
+02_Nastran_Model\RC_P60\RC_P60.nas
+02_Nastran_Model\RC_P80\RC_P80.nas
+02_Nastran_Model\RC_P100\RC_P100.nas
+# 18-20 margin angles, real case
+02_Nastran_Model\REAL_A7.3\REAL_A7.3.nas
+02_Nastran_Model\REAL_A8.6\REAL_A8.6.nas
+02_Nastran_Model\REAL_A9.8\REAL_A9.8.nas
