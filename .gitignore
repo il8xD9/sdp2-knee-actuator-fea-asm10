@@ -1,0 +1,14 @@
+# raw Nastran output (regenerate by running the decks; 100-350 MB per file)
+*.OUT
+*.FNO
+*.RSF
+*.NDB
+*.TMP
+*.ECD
+*_console.txt
+tmp_*/
+# Python
+__pycache__/
+*.pyc
+# Office lock files
+~$*

@@ -1,0 +1,21 @@
+﻿AMxJointOriginInferCmd | Infer Origin
+AppLoopChainingWorkFeatureEditCtxCmd | 
+AppSteeringWheelMiniNavCmd | 
+Autodesk:MFGInterop:OpenInFusionCmd | Open in Fusion
+Autodesk:MFGInterop:OpenInWebBrowserCmd | View details on web
+Autodesk:MFGInterop:UpdateOpenInFusionCmd | Update and Open
+DLACxOpenInAcadCmd | 
+DrawingEditOriginIndicatorCtxCmd | Edit Origin Indicator
+DrawingGeneralDimensionIntersectionCtxCmd | 
+DrawingHideOriginIndicatorCtxCmd | Hide Origin Indicator
+DrawingOrdinateDimensionContinuousRunningCtxCmd | Continuous running dimension
+DrawingOrdinateDimensionHideOriginIndicatorCtxCmd | Hide Origin Indicator
+DrawingOrdinateDimensionUseOriginIndicatorCtxCmd | Use Origin Indicator
+DrawingOrdinateHoleOriginIndicatorCtxCmd | Hide Origin Indicator
+NEi:InCAD:Environment | Autodesk Inventor Nastran
+PartConstructionIntersectFaceCmd | Intersect Faces
+PartDwgUnderlayOpenInAutoCADCtxCmd | 
+SketchSplineInsertKnotCtxCmd | Insert Vertex
+SketchSplineInsertPointCtxCmd | Insert Point
+TSplineInsertEdgeCmd | Insert Edge
+TSplineInsertPointCmd | Insert Point

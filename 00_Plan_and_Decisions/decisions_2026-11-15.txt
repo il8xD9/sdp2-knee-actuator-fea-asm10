@@ -1,0 +1,213 @@
+DECISIONS - FEA of full asseymbly 10 (route a, last v8, side vents), 15 Nov 2026
+Run folder: 03_Mechanical_Design\CAD\last v2\last v8\simulation_3_assymbly_10.  Earlier decisions (D-Q*, D-FAB*, D-V3-*) are in
+last v6\simulation_2_assymbly_7\00_Plan_and_Decisions\decisions_2026-11-13.txt and still apply unless replaced here.
+Owner instruction 15 Nov: CAD updated to last v8; the inlet tube supplies the air; the 2 vent tubes vent only when it is time and stay
+closed by a valve during inflation and extension; no tube may leak; CAD + simulation assumptions/environment must match the hand
+calculation (v12 Model B); check parts and assembly first; the actuator stays centred on the knee axis and bends with the knee.
+Standing rule: no Nastran job before the owner says "start".
+
+D-A10-FOLDER  New run folder simulation_3_assymbly_10 in last v8 (scripts, meshes, CHK_FAB4 calibration + B3 results copied from
+  simulation_2_assymbly_7; CAD copy in 01_CAD_copy, md5 = source_hashes_last_v8_sidevents.md5, 13/13 OK).
+  Why: the CAD moved to last v8; v1/v2/v3 work of asm 07 stays untouched.  Alternative: run in the asm 07 folder -> results filed
+  under the wrong assembly.
+D-A10-SEAL  Inlet port and both vent ports are modelled as closed wall (no hole) = valves closed; the bladder is one closed shell
+  (seal_check_a10.py: 2052 shells, 0 free edges in all 14 decks) and the pressure acts on every bladder element.
+  Why: owner rule (no leak, vents closed during inflation and extension) and the hand calc (closed cavity, uniform p).  Effect of the
+  alternative (model the 3 D6 holes + valve caps): the cap force p*A (12.6 mm2 per bore, 0.25 N at 20 kPa) goes into the tube and
+  back into the wall - the same resultant, only a local stress peak at the 1.13 mm web between the vent holes; no change of moment.
+D-A10-SUPPLY  Pressure is PRESCRIBED (regulated supply through the inlet, open to the source while the vents are closed).
+  Why: v12 Model B M = p * dV/dtheta assumes constant p.  Alternative (inlet valve also closed = fixed air mass, isothermal):
+  ESTIMATE from v12 k = 206 990 mm3 and V0 423.4 mL: from 5.8 to 0.7 deg the cavity grows ~18 mL, p falls 20 -> ~14.7 kPa (-26 %),
+  27 -> ~21.4 kPa (-21 %), so the moment would drop by the same fraction.  Not run.
+D-A10-VENT  Venting = gauge pressure 0 in the flexion steps (D1/D2 pre-tension, vented flexion of REAL_A65); vents closed in every
+  pressure step.  Why: owner's valve rule.
+D-A10-TUBES  tupe-15 and the 2 tupe-16 are not meshed (0.44-1.18 g LDPE stubs outside the load path), as tupe-15 in asm 07.
+  Alternative (mesh them): no effect on moment / skin pressure; only tube stresses, which are not a requested result.
+D-A10-DECKS  The 14 decks of queue_v3_1 regenerated with the same commands (only change TITLE a07 -> a10); bulk data diff vs the
+  simulation_2_assymbly_7 decks = 0 lines for all 14.  Why: asm 10 differs from asm 07 only by the 3 sealed ports and 2 stubs
+  (D-A10-SEAL/TUBES), so the FEA model is the same; reusing proven decks avoids new set-up errors.
+D-A10-HC  Hand-calc-matching reference = B0 (rigid leg halves hinged on the knee axis Z through X = r(0) - 65 = 4.06, Y = 0; skin
+  bonded = no slip; stiff pad 9.65 MPa; closed bladder at prescribed p; angles 0.7 / 3.28 / 5.78 deg of v12 W.7), labelled
+  "idealised reference" in all outputs.  The real-case runs (REAL_*) keep the soft contracted tissue, mu 0.37, real pad.
+D-A10-ORDER  Queue order unchanged (queue_a10_1.txt): B0 first, then the ladder, real case, matrix rows, mesh study, REAL_A65 last.
+
+---- owner answers 15 Nov 2026 (cycle confirmed): 1 "follow the window ... supply air at heel strike ... until 13 % the bladder
+start fill the assist"; 2 "vent based on the project and controls-lead files"; 3 "cases take the knee angles as needed, pressure 0-100 kPa,
+20 kPa step"; 4 "no [swing], only the knee extension angles with +4 degree"; then "yes add a margin of 4", "yes add [the project
+profile] as well", "yes end about 50 % stance".
+D-A10-CYC  New deck sequence CYCLE (deck_a07.py --seq CYCLE --cyc_p p|PROJ; default behaviour unchanged, regression B0_A5.8 diff 0):
+  D1/D2 donning at 0 deg, then stance frames 1 -> 50 % with the knee on the Biomech O2 Waveform_Opt2 angle (waveform_O2_opt1.csv):
+  F 1-12 % supply from heel strike, linear fill to the onset pressure; W 13-36 % window at the test pressure (vents closed, supply
+  open = prescribed p); V 37-50 % vent, exponential to the 2.4 kPa residual at 50 % (98.7 ms after the offset, inside controls-lead file Rev 25's
+  81-102 ms with two MHE3; p79 Section 3). 52 subcases. The shank half (rigid: skin grids by exact SPCD; real: shank bone) turns
+  about the knee centre H = (4.057, 0, 0); the bladder is tied to the rings on both halves, so it turns with the shank.
+  Alternative: fixed angle per pressure (old MULTI) - no time history, kept only for the margin angles.
+D-A10-PROJ  Project profile run = W2 p20 column (Biomech O2 frames, M1-M7 v10 Eq. 20-21: 6.9 -> 20.0 at 21 % -> 2.8 kPa at 36 %),
+  fill 0 -> 6.9 kPa by 13 %. Test runs: constant 0 / 20 / 40 / 60 / 80 / 100 kPa through the window, fill to that value by 13 %.
+D-A10-MOM  Moment = knee moment about the knee centre (Z through H) of the shank-half reactions (post_a07 M_knee_ext_Nm, + extension).
+  Device moment = M(run p) - M(run P0) frame by frame (same kinematics, vented device) -> cycle_a10.py; hand calc M = p k,
+  k = 206 990 mm3 (v12 E.3) = 0.20699 N m/kPa. Margin cases: M(p) - VREF at the same angle.
+D-A10-CASES  Margin angles = the three window angles + 4 deg: 3.28 -> 7.28, 4.63 -> 8.63, 5.78 -> 9.78 deg, at 20/40/60/80/100 kPa
+  (0 kPa = vented step before, + VREF after). No swing / 65 deg case (owner). Each case for both models: B0 (hand-calc-matching
+  idealised reference) and REAL (soft contracted tissue, mu 0.37, pad 0.0965 MPa). 20 decks, queue_a10_2.txt (queue_a10_1 superseded).
+  Expected effect of 100 kPa: 5 x the design pressure; skin limits (27 kPa on the skin) will be checked and reported per level.
+D-A10-CADV11  (owner: fix the CAD parts and the simulation so that the shank also rotates with the bladder about the knee joint centre)
+  CAD v11 in last v9\Route a - thigh strap 150 - knee joint (main) (README_CAD_v11_knee_joint.txt): leg, pad, webbing, Velcro cut
+  at the knee line into thigh / shank parts; shank pieces in one sub-assembly hinged on the knee axis (Mate + Flush + Angle =
+  knee_flexion); bladder and cover shapes at 3.28 / 4.63 / 5.78 / 7.28 / 8.63 / 9.78 deg made with the hand-calc rigid-halves
+  kinematics (shank half rotated about the knee axis, mitred at the bisector); one assembly per angle. CAD k = 205 345 mm3 vs hand
+  calc 206 990 (-0.8 %). Why: Inventor cannot bend a solid; the mitre is exactly the Model B assumption. Alternatives: a smooth
+  bend radius at the crease (no hand-calc basis, k changes with the radius); one assembly with model states (API not proven here).
+  The FEA keeps its own straight mesh (geo8) and bends it by the knee rotation; the CAD K shapes are the kinematic reference.
+D-A10-RUN  Owner 15 Nov 23:57: start the runs one at a time and watch the RAM. queue_a10_2 launched detached, one job at a time, Nastran RAM=2000 MB (was 2500; only ~0.8 GB available at launch, the rest pages to the scratch disk), stall watchdog 45 min.
+D-A10-HOLD  Owner 16 Nov: finish and save the hand-calc reference (rigid leg halves, bladder bonded), then ask whether to continue with the real case. The 10 real-case decks (RC_*, REAL_A*) moved to 02_Nastran_Model\_held_real_case so the running queue skips them (it will log 'deck not found' once per deck = expected, not a fault); the B0 runs (items 1-10) continue unchanged. Real case relaunched only on the owner's answer (queue_a10_3 = items 11-20 from the hold folder).
+D-A10-ANG  Owner 16 Nov: angle cases 3, 7.28, 8.63, 9.78, 13, 16 and 19 deg. New MULTI decks B0_A3.0 / A13.0 / A16.0 / A19.0 (20-100 kPa, 20 kPa step; 0 kPa = vented step + VREF) in queue_a10_2b, started automatically after queue_a10_2 ends (chain_a10.ps1, one job at a time, RAM 2000); REAL_A3.0 / A13.0 / A16.0 / A19.0 added to the hold folder and queue_a10_3. Note: at 13-19 deg the rigid halves overlap near the crease (geom_check_v3: skin 7.5-11 mm, device top 13.5-20 mm), so the idealised reference is increasingly unphysical there and may not converge; any failure is logged and the queue moves on.
+D-A10-GAP  (E-64) Rigid-leg reference: pad and cover sewing flange cut at the knee line, --crease_gap 2.5 mm = the two element
+  rows at y = +-1.88 (188 pad hexes + flange quads; gap -3.76..+3.76 mm). Why: the hand calc has rigid halves joined only by the
+  hinge and the bladder; CAD v11 has the pad split at y = 0 (streches.12 / .13). With the link kept, the B0 model carried
+  ~50 N m/deg of passive moment and failed at 3.28 deg. Alternatives: real pad modulus in the crease band (keeps a soft link,
+  adds a modelling value with no source); unbonding only (pad still bridges). Real case unchanged (soft tissue, continuous pad).
+  Check deck CHK_GAP (5.78 deg vented, 20 kPa, VREF) first; then the 14 B0 decks regenerated with the gap.
+D-A10-NOPT  (E-65) Rigid-leg reference without strap pre-tension (ring dT = 0, calib_zero_rigid.json). Why: the hand calc has no
+  strap force - the rigid halves with bonded (no-slip) device are its anchorage; the soft-tissue shrink calibration gives kN ring
+  forces and MPa skin pressures on a rigid leg. Alternative: re-calibrate the shrink on the rigid leg to 9-21 N (one iteration
+  per ring, no hand-calc basis, and the bond already removes slip). Real case keeps the calibrated pre-tension.
+D-A10-PTR  (E-66, replaces D-A10-NOPT) Rigid-leg reference keeps the DESIGN strap pre-tension 20.89 / 19.59 / 13.3 / 9.4 N
+  (decisions_2026-11-13 pre-tension (a)) with its own shrink calibration calib_rigid.json (dT -0.458 / -0.216 / -0.147 /
+  -0.208 K = linear scaling of the CHK_GAP rigid-leg D2 tensions, 45.7 / 90.8 / 90.3 / 45.1 N per K). Why: dT = 0 gives a zero
+  load vector in D1 (E5073); the design straps are part of the device; on a rigid leg ring tension is linear in dT.
+D-A10-CORE  (E-67) The hand-calc-matching reference is the CORE model (deck_a07 --rigid_leg --core B): two rigid halves hinged on
+  the knee axis, the bladder floor and the cover sewing flange bonded to them (no slip) for |y| >= B, a rigid support surface
+  (pad-top shape) under the floor, the bladder + cover as in the CAD, pressure on the whole closed bladder. Inside the crease band
+  |y| < B the bladder wall is a fold (MAT8 12, 1 % of E along the leg, full hoop) and the flange is cut - this is the hand calc's
+  mitre (CAD v11 K parts): the wall carries no axial force across the crease, so the end pressure force p*A acts on the halves at
+  rho_c and M -> p*k. Pad, webbing, hooks, Velcro and tissue are not in this model (the hand calc has none of them); no straps,
+  so no donning steps. Alternatives tried and logged: full B0 stack with crease gap (E-64/65/66: stiff, fails < 5.8 deg).
+  The real case is unchanged (all parts, soft tissue, mu 0.37).
+D-A10-Q4  16 Nov 01:45: CHK_CORE (core 25 mm) converged through 20 kPa at 5.78 deg: M_knee 7.00 N m, vented 1.81 N m -> device 5.19 N m vs p k 4.14 N m (+25 %: FEA mid-surface shell inflated to the cover vs the hand-calc inner cavity, about +7..+16 % in k, plus bulge in the fold band); VREF after deflation not converged (bladder collapse) -> angle-case device moment taken against the vented step before inflation. The 14 reference decks regenerated as core models (queue_a10_4.txt, PID 12972); the old queue_a10_2 / 2b B0 decks replaced.
+D-A10-FILL13  (E-69) Core reference cycle only: supply starts at the window onset (13 %, 3.28 deg) with a 5-step fill there; 1-12 % vented flexion. Why: inflating the fold band at small angles is unstable in the static solver; the hand-calc comparison is the window 13-36 % (owner: the bladder starts to fill when the assistance starts at 13 %). Real case keeps the fill from heel strike.
+D-A10-SKIP  (E-70) Core cycles above 20 kPa skipped (P60 stopped, P80/P100 held): each fails at the first fill step; the angle cases at 20-100 kPa are kept because flex-then-inflate converged (CHK_CORE). Results of PROJ (to 14 %) and P20 (re-run, queue 5) carry the cycle comparison.
+
+D-A10-FIX  16 Nov 04:30, owner: fix this problem and get the other results first; do not start the real case yet. Real case
+  (queue_a10_3, _held_real_case) stays held. Root cause of the core-reference stalls found from the solver logs (E-108): contact
+  chatter on the bladder-cover slide line in the fold band (closed-contact share and displacement alternate every iteration),
+  not only ballooning. Fixes are applied one at a time on the 3.00 deg angle case and checked before any production run.
+D-A10-STAB  (E-108) PARAM,SLINESTABKSFACT,1.0E-4 (deck_a07 --slstab 1e-4) in the reference decks. Why: it is the solver's own
+  slide-line stabilisation (off by default); it removes the flip-flop. Value: 0.01 (CHK_STAB1) converged 20 kPa but raised the
+  vented moment at 3 deg from 1.24 to 6.16 N m (a spring, rejected); 1e-4 (CHK_STAB2) converges with vented 1.49-1.50 N m
+  (+0.26 N m = +21 % of the small passive moment; it cancels in the device moment M(p) - M(0) except for its pressure-dependent
+  part). Alternatives: bonding bladder to cover in the band (changes the physics: no slip, the cover then carries the fold);
+  lower penalty SFAC (more penetration, does not stop status flips); SOL 129 transient (slower, contact chatter remains). The
+  stabilisation energy share is printed in each .LOG (PERCENT OF CONTACT STRAIN ENERGY DUE TO STABILIZATION) and is reported.
+D-A10-BLEND  (E-109) Continuous rigid support across the knee line (deck_a07 --sup_blend): the support faces that straddle
+  y = 0 are kept and every support grid in the band |y| < 25 mm turns by theta * s(y) (s = 0 thigh side .. 1 shank side), like
+  skin over the knee; checked no fold-over to 19 deg. Why: the old core model left a 7.4 mm slot under the free band floor at the
+  knee line; at 40 kPa the floor ballooned into it (CHK_STAB1). Effect: CHK_BLEND (3 deg) converges 0 / 20 / 40 / 60 kPa (before:
+  failed at 15 kPa). Alternatives: support trimmed at the bisector per angle (exact Model B mitre but a different mesh per angle
+  and no cycle deck possible); floor bonded in the band (the floor element at y = 0 would be crushed by the posterior closure
+  75 mm x theta). Reactions on the blended grids count to the shank (y < 0) or thigh (y >= 0) half by position, as before.
+D-A10-ENDISO  (E-112) Cover-body elements that face along the leg axis (|n.Y| > 0.7, 70 elements at the end walls) take the
+  isotropic end-cap property (deck_a07 --cov_endiso 0.7). Why: the leg axis from MCID 91 is ill-defined on them; the corner at
+  the shank end hinged (CHK_STAB2 40 kPa, CHK_BLEND 80 kPa singularity at grid 25020). The report already states that the end
+  caps are isotropic; this applies the same rule to the end-facing body elements. Alternative: keep orthotropic with a local
+  axis per element (no physical fabric direction exists on an end wall; same result expected). Check deck CHK_END.
+D-A10-BED  (E-117) Rigid floor bed (deck_a07 --floor_bed 1.0) in the reference decks: the band floor rests on a rigid bed 1 mm
+  (half the wall) below its mid-surface, continuous with the bonded floor outside the band, instead of the old pad-top surface
+  4.2 mm lower. Why: the hand calc has the bladder floor on the rigid leg; the 4.2 mm drop made the free band floor ridge and snap
+  at 80 kPa (CHK_END). Alternative: lift the pad-top grids (68 of them are shared with the cover flange, so the flange would move);
+  bond the band floor (crushed by the posterior closure, see D-A10-BLEND). Check deck CHK_BED.
+D-A10-FBOND  (E-120, replaces D-A10-BED and the support part of D-A10-BLEND) The band floor is bonded (deck_a07 --floor_bond):
+  the 78 floor grids with |y| < 25 mm follow the leg surface bending smoothly through the band (theta * s(y)); no floor contact.
+  Why: the owner's reference spec is 'rigid leg halves, bladder bonded'; every floor-contact variant failed (slot E-109, 4.2 mm
+  drop E-117, tight-bed chatter CHK_BED). Effect: the posterior closure is spread over the 50 mm band (floor axial compression
+  8 % at 3 deg .. 50 % at 19 deg, soft 1 % axial E, held so it cannot buckle); the band side walls and top stay free (fold).
+  Alternative effects: rigid halves with a hard split at y = 0 (Model B mitre) crush the floor element at the knee line; a
+  contact floor brings back the chatter.
+D-A10-HCQ  16 Nov 10:55: CHK_FB (stabilisation 1e-4 + isotropic cover end walls + bonded band floor) converged 0 / 20 / 40 / 60 kPa
+  at 3 deg: device 4.38 / 8.74 / 13.47 N m = 1.06 / 1.06 / 1.08 x p k (vented 1.49 N m); 80 kPa stopped at ~70 kPa (E5076, largest
+  increments at the cover shank-end corner grid 25052). The fixed reference set HC (gen_hc.sh: angle cases HC_A3.0 .. A19.0,
+  cycles HCC_P0 / P20 / PROJ / P40 / P60 / P80 / P100) is launched one at a time (queue_a10_hc.txt; RAM 2000 MB): cycles <= 60 kPa
+  first (not affected by any later 80-100 kPa fix), then the angle cases, then P80 / P100; HC_A3.0 last (= CHK_FB deck). The old
+  B0 / B0C runs and 05_Results\Tables\v3_B0 stay as they are (superseded, not deleted). Results tag: v3_HC. Real case still held.
+D-A10-P0BR  16 Nov 14:05 (E-124 / E-126) Vented baseline of the cycles. HCC_P0 (0 kPa, empty bladder) converged frames 1-23 and
+  stopped at 24 % (first frames after the peak angle: snap at 22 %, 2.42 -> 3.49 N m). Decision: device moment after the peak frame
+  = M(p) - M0(theta), with M0 from the converged P0 loading branch (frames 1-21) interpolated by knee angle (cycle_a10.py
+  --p0_load_branch). Why: the model is elastic and frictionless, so M0 is a function of the angle only; the snap is a switch of
+  wrinkle pattern in a zero-stiffness membrane, not a load the device carries. Effect: the window 22-36 % and vent 37-50 % have a
+  baseline (2.42 .. 1.93 N m). Alternatives: (a) same-frame P0 at 22-23 % would lower the device moment there by about 1.07 N m and
+  leave 24-50 % with none; (b) re-running P0 with smaller increments costs about 1 h of solver time, would likely snap again, and
+  the queue must stay one job at a time - not done, can be added after the queue if the owner wants; (c) the vented step of the
+  HC angle cases gives M0 at only 3 / 7.28 deg, too coarse for 3.7-5.8 deg.
+D-A10-C36  16 Nov 14:35 Owner: for the next runs, stop at 36 % of the gait cycle. The cycle decks not yet run (HCC_PROJ / P40 /
+  P60 / P80 / P100) were rebuilt in place with deck_a07 --cyc_end 36 (new option, default 50; regression: HCC_PROJ rebuilt without
+  it is byte-identical to the old deck): stance 1-36 % = vented flexion 1-12 %, fill at 13 %, window 13-36 %; no vent steps; 41
+  subcases instead of 55; seal check 0 free edges, pressure on all 2052 bladder shells. Queue file unchanged (same deck paths).
+  HCC_P20 (running, started 11:48) is left to finish as launched; HCC_P0 already ran. The collector reports cycles to 36 % for
+  all runs (cycle_a10.py --stance_max 36), so P0 / P20 frames 37-50 are kept in their run folders but not tabled.
+  Angle cases (HC_A*) are single-angle steps, not gait frames - unchanged. The held real-case cycle decks (RC_P*) must be rebuilt
+  with --cyc_end 36 before any launch. Effect: about 25 % less solver time per cycle; no vent-phase results.
+  Alternative: stopping HCC_P20 now would save about 20 min but risks losing its post-processing (cf. the wrong stop, E-123).
+D-A10-C3  16 Nov 17:40 Owner: for the next runs, do not run every stance step; use a step of 3 or 4 % stance. New deck_a07 option
+  --cyc_step N (default 1; regression: HCC_P40 rebuilt without it is byte-identical). Chosen N = 3: frames 3, 6, 9, 12 (vented),
+  fill at 13, window 13, 15, 18, 21 (peak angle 5.78 deg), 24, 27, 30, 33, 36 -> 18 subcases instead of 41 (about 55 % less
+  solver time). The peak 21 % and the window ends 13 / 36 % are kept exactly, so every frame is also a P0 / P20 frame (same-frame
+  vented reference up to 21 %, loading branch after). HCC_P40 / P60 / P80 / P100 rebuilt in place, seal check OK. HCC_PROJ
+  (running since 15:10, stride 1 to 36 %) is left to finish. Alternative N = 4 (frames 4, 8, 12, 13, 17, 21, 25, 29, 33, 36; 15
+  subcases) saves about 3 more subcases but loses the 15 / 18 % rise of the window, where the angle changes fastest.
+  Larger angle steps per subcase (up to 1.7 deg at 9 -> 12 %) may cause more automatic bisections. Real-case RC_P* decks: rebuild
+  with --cyc_end 36 --cyc_step 3 before launch.
+D-A10-BR  16 Nov 19:05 (E-129) The cycle runs converge but the core model has more than one stable state of the folded bladder at the
+  same angle and pressure (HCC_PROJ: 9.3 vs 14.3 N m near 21 %; HCC_P20: 7.8 vs 9.0 N m at 22-25 %). Decision: (1) the queue keeps
+  running unchanged; (2) the angle cases HC_A* are the main FEA vs hand-calc comparison (same load order as p k: bend vented, then
+  pressurise at a fixed angle); (3) cycle frames are reported with a state flag: the frame whose bladder volume is clearly below
+  the same-pressure state of the neighbours / the P20 run (squeezed, higher potential energy U - p V) is flagged 'second state'
+  and not used for the device-moment ratio; the spread between states is reported. Why: both states are valid static solutions
+  of the model, the lower-energy one is the one the real bladder settles in, and the hand calc has no such states. Alternatives:
+  (a) stiffen the fold band (changes the agreed hand-calc model, re-run all); (b) smaller steps (opposite to the owner's 3 %
+  stride and still no guarantee); (c) report every frame as computed (mixes states, ratios 1.2-3.3 that only reflect the state).
+D-A10-BR (implementation, 16 Nov 20:55) cycle_a10.py --state_flag: along each run a step with volume -2.5 cm3 and moment +15 %
+  (pressure not falling > 1 kPa) = level +1 (squeezed), the reverse = level -1 (relaxed); level 0 = the state at W 13 %. Only
+  level-0 frames enter the ratio summary; the others stay in cycle_moment.csv with a note. Check on the finished runs: level-0
+  ratio at 21 % = 1.664 (HCC_P20) and 1.665 (HCC_PROJ) - the same state in both runs; squeezed frames 2.8-3.8 (PROJ); relaxed
+  frames 1.28-1.30 (P20 22-24 %). PROJ W 13 % (1.96, right after the 6.9 kPa fill step) is a borderline case kept at level 0.
+D-A10-P60  16 Nov 21:50 Owner: make the final pressure 60 kPa and do not run the real case. (1) Angle cases HC_A7.3 / 8.6 / 9.8
+  / 13.0 / 16.0 / 19.0 rebuilt in place with --plist 20,40,60 (then the vented VREF step); seal check OK. (2) HCC_P80, HCC_P100 and
+  HC_A3.0 decks moved to 02_Nastran_Model\_dropped_owner_60kPa (not deleted); the running queue logs them as 'missing deck' and
+  skips them (auto error-log rows are expected, not faults). (3) The 3 deg angle case = CHK_FB (identical deck to HC_A3.0 apart
+  from the title, already converged 0-60 kPa). (4) The real case (queue_a10_3, _held_real_case) is not run; it stays as built.
+  Effect: about 4-5 h of solver time saved; the 80 / 100 kPa limit (E-123, about 70 kPa at the cover end corner) is outside the
+  owner's range. Report: v3 final .docx (idealised reference, 0-60 kPa) after the last angle case.
+D-A10-P60F 17 Nov 00:05 HCC_P60 stopped at the first window step (E-133, cover end-region rotation instability at grid 10899,
+  theta about 3.6 deg, 60 kPa). Decision: no re-run; report the converged fill (0-60 kPa at W 13 %, theta 3.28 deg) and mark the
+  13-36 % window at 60 kPa 'not computed'; 60 kPa against the angle comes from CHK_FB (3 deg) and HC_A7.3 ... A19.0. Why: the stall
+  is a local cover-end instability (same family as E-123, ~70 kPa at 3 deg), not a step-size problem - the solver bisected 10 times
+  down to a 0.0005 load-factor step without progress; a re-run costs ~3 h and needs a model change at the cover end to pass.
+  Alternatives: (a) re-run with smaller window steps / more increments - same instability expected, ~3 h, delays the report;
+  (b) add stabilisation or stiffen/close the cover end caps - changes the agreed idealised model and all other runs would no longer
+  be comparable; (c) drop P60 entirely - loses the converged 60 kPa fill data at 13 %. Effect: the cycle table has P20, P40, PROJ
+  over 13-36 % and P60 at 13 % only.
+D-A10-P60F (extension, 17 Nov 00:40) HC_A7.3 stopped in the 40 -> 60 kPa step at 7.28 deg (E-136, cover body side edges
+  across the knee line). Same decision: no re-run; 20 / 40 kPa at 7.28 deg reported, 60 kPa marked 'not computed'. The remaining
+  angle cases run unchanged; the queue keeps any converged pressure level. Alternatives as in D-A10-P60F; additionally (d) stop
+  the queue now - loses the 20 / 40 kPa results at 8.6-19 deg that the report needs for the angle trend.
+D-A10-ANGF 17 Nov 06:40 Fixed-angle cases above 7.3 deg did not reach their angle (E-150: the empty bladder fold band and the
+  cover side edges wrinkle in the closing crease at about 6.5-8 deg, before any pressure is applied). Decision: no re-run; the
+  fixed-angle comparison uses 3.00 deg (CHK_FB, 20 / 40 / 60 kPa) and 7.28 deg (HC_A7.3, 20 / 40 kPa), which bracket the gait
+  window (3.28-5.78 deg); 8.63-19 deg are reported as 'not reached' with the angle where each stopped. Why: the owner asked to
+  finalise without new runs beyond the queue, and the failure is in the vented step that defines the baseline - any fix changes
+  that baseline. Alternatives: (a) bend with a small holding pressure (e.g. 2 kPa) - would likely pass the wrinkle but the
+  baseline is then not the vented device, so the device moment changes definition; (b) larger contact stabilisation - rejected
+  before (0.01 acted as a structural spring, D-A10-STAB); (c) more increments / smaller angle sub-steps - the solver already
+  bisected to 0.03 % of a step without progress; (d) inflate first, then bend (cycle order) - that is the cycle runs, already
+  reported. Effect: no angle trend above 7.28 deg; the 'ratio grows with angle' statement rests on 3 -> 7.28 deg and the cycles.
+D-A10-ASSIST 17 Nov 10:30 Assist ratio given to the patient (E-152). Definition: alpha = M_dev / deficit, deficit = M_healthy -
+  M_ACLR at the same stance frame from Biomech O2 Waveform_Opt2 (allowed source 7); also reported: M_dev / biomechanics target (alpha 0.20,
+  capped at M_ACLR), the over-cap check M_dev > M_ACLR, and (M_ACLR + M_dev) / M_healthy. Main fold shape used in the statements,
+  other shapes listed and marked; idealised reference only (real case not run). Why: this is the torque law of Biomech O2
+  (tau = MIN(alpha x deficit, M_ACLR)), so alpha is directly comparable with the test value 0.20 and the limit 0.254. Alternatives:
+  (a) M_dev / M_ACLR as 'assist ratio' - reported as the cap check, but it is not the biomechanics lead's alpha and grows without bound at the
+  window edges (10x at 36 %); (b) M_dev / M_healthy - mixes the healthy side into a patient ratio, smaller numbers (0.17 at 21 %
+  for PROJ) not comparable with 0.20; (c) only the peak frame - hides the over-cap frames at the window edges; (d) include the
+  squeezed fold shape in the statements - alpha 0.35-0.48, a higher-energy path effect (D-A10-BR). Effect: PROJ alpha 0.205-0.209
+  (103-105 % of target) over 18-27 %, 0.209 at 21 %; P20 0.209, P40 0.312 at 21 %; over the cap at the window edges.
+
