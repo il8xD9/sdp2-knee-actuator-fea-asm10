@@ -6,7 +6,7 @@
 # 3. run_queue.ps1 on 02_Nastran_Model\queue_production.txt (one job at a time, watchdog, post after every run).
 param([string]$Level = "M0", [int]$CalIter = 1, [int]$Ram = 2500, [int]$StallMin = 45, [string]$Study = "M1,M2", [switch]$Fast)
 $R = Split-Path $PSScriptRoot -Parent
-$py = "C:\Python314\python.exe"
+$py = "python"
 $calib = Join-Path $R "02_Nastran_Model\calib_dT.json"
 $mesh = Join-Path $R "02_Nastran_Model\mesh_$Level.pkl"
 if (-not (Test-Path $mesh)) { & $py -P (Join-Path $PSScriptRoot "mesh_a07.py") --level $Level }

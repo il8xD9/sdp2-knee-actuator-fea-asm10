@@ -764,6 +764,11 @@ def main():
     D.H("References")
     for i, (_, t) in enumerate(REFS, 1):
         D.P("[%d] %s" % (i, t), size=8.5)
+    cp = D.d.core_properties   # document properties: team as author, report date (python-docx would leave its template defaults)
+    import datetime
+    cp.author = cp.last_modified_by = "SDP-2 (MMNB) team"; cp.comments = ""; cp.revision = 1
+    cp.title = "Inflatable knee actuator - FEA hand-calculation reference (full assembly 10, route a), report v3"
+    cp.created = cp.modified = datetime.datetime(2026, 11, 17, 10, 30)
     D.d.save(out); print("written", out)
 
 

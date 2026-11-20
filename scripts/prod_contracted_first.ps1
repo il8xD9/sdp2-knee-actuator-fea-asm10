@@ -8,7 +8,7 @@
 # 4. run_queue.ps1 on 02_Nastran_Model\queue_contracted_first.txt.
 param([int]$Ram = 2500, [int]$StallMin = 45)
 $R = Split-Path $PSScriptRoot -Parent
-$py = "C:\Python314\python.exe"
+$py = "python"
 $calib = Join-Path $R "02_Nastran_Model\calib_dT.json"
 $mesh0 = Join-Path $R "02_Nastran_Model\mesh_M0.pkl"
 $mesh1 = Join-Path $R "02_Nastran_Model\mesh_M1.pkl"

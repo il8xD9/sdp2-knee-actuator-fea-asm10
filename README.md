@@ -1,7 +1,8 @@
 # Inflatable knee actuator – FEA hand-calculation reference (full assembly 10, route a)
 
 SDP-2 (MMNB) soft knee exoskeleton, right leg. Inventor Nastran 2026, SOL 106 (nonlinear static, large displacement,
-follower pressure). Report: [`07_Report/FEA_asm10_routeA_HandcalcReference_v3.docx`](07_Report/FEA_asm10_routeA_HandcalcReference_v3.docx).
+follower pressure). Report: [`07_Report/FEA_asm10_routeA_HandcalcReference_v3.docx`](07_Report/FEA_asm10_routeA_HandcalcReference_v3.docx)
+([PDF](07_Report/FEA_asm10_routeA_HandcalcReference_v3.pdf)).
 
 > **Idealised reference, not the real device.** The leg is two rigid halves turning about the knee axis, and the bladder
 > and cover are bonded to them. There is no soft tissue, no pad, no straps and no friction. These are the assumptions of the
@@ -20,6 +21,10 @@ follower pressure). Report: [`07_Report/FEA_asm10_routeA_HandcalcReference_v3.do
 - **Project pressure profile:** 6.89 N·m at 21 % stance. That is α = 0.209, or 104 % of the target (α 0.20 × 33 N·m = 6.60 N·m), as in the final project report D36.
 - **Stresses:** factor of safety is 8.5 or more for the bladder and 1.9 or more for the cover, up to 60 kPa.
 - **Angle cases that did not reach their angle:** 8.63°, 9.78°, 13°, 16° and 19° stopped while the empty device was being bent (E-150).
+- **Option-2 cap:** in `05_Results/Tables/v3_HC/assist_ratio.csv`, `over_cap = yes` means that the device moment is larger than
+  the patient's own knee moment at that frame. With the project pressure profile (HCC_PROJ) this is the case at 13–17 %, 20 %, 26 %
+  and 28–36 % stance, where the patient's own moment is small; at the 21 % peak the device stays below the cap. At a constant
+  40 kPa every window frame is over the cap.
 
 Every number is explained in the report. Every decision is in
 `00_Plan_and_Decisions/decisions_2026-11-15.txt`, and every error and non-convergence is in `06_Error_Log/error_log.csv`.
@@ -96,7 +101,7 @@ from the code and came out identical.
 | `04_Runs/<run>/` | Solver log (`.LOG`), post-processed results (`_results.csv/.xlsx`), convergence history, run time. Raw `.OUT/.FNO` are not committed (see below). |
 | `05_Results/` | Summary tables (`Tables/v3_HC`) and every report figure (`Images/v3_HC`) |
 | `06_Error_Log/` | `error_log.csv` (E-xx) and the queue logs |
-| `07_Report/` | Report v3 (Word) |
+| `07_Report/` | Report v3 (Word, and a PDF export of the same file) |
 | `scripts/` | Mesh (`mesh_a07.py`), decks (`deck_a07.py`, `make_decks_v3.sh`), seal check, run queue, post-processing, tables, figures, report builder |
 
 ### Run names
@@ -106,7 +111,7 @@ runs. Each one is the same run as the full name used in this repository:
 
 | D36 name | Full run name (folder in this repository) |
 |---|---|
-| A3 | `CHK_FB` (the 3° case; same deck as HC_A3.0) |
+| A3 | `CHK_FB` (the 3° case). `HC_A3.0` has the same deck, so it was not run a second time; that is why it is in `_dropped_owner_60kPa/`. |
 | A7.3, A8.6, A9.8, A13, A16, A19 | `HC_A7.3`, `HC_A8.6`, `HC_A9.8`, `HC_A13.0`, `HC_A16.0`, `HC_A19.0` |
 | C0, C20, C40, C60 | `HCC_P0`, `HCC_P20`, `HCC_P40`, `HCC_P60` |
 | CP | `HCC_PROJ` |
@@ -120,7 +125,7 @@ runs. Each one is the same run as the full name used in this repository:
 
 ## Raw solver output (GitHub Release)
 
-The raw Nastran files (`.OUT`, `.FNO`, `.RSF`, console logs: about 3 GB, single files up to 350 MB) are too big for git.
+The raw Nastran files (`.OUT`, `.FNO`, `.RSF`, console logs: about 3 GB unpacked, 0.88 GB as zips, single files up to 350 MB) are too big for git.
 They are attached to the release **`raw-output-v3`** (repository page → *Releases*), with one zip per run: `raw_<run>.zip`.
 `RAW_OUTPUT_MANIFEST.txt` lists every zip with its size and SHA-256.
 
@@ -141,8 +146,9 @@ file paths is replaced by `user_`, which has the same length, so the line layout
 These are the 13 CAD files of full assembly 10 (`full asseymbly 10.iam`, actuator-V11, cover.09, side vents, leg and strap
 parts), copied from the project. You don't need them to re-run the FEA, because the mesh is built from `cad_build_code/`.
 They are here for reference and need Autodesk Inventor 2026. Author, Designer and Description are set to roles. Inventor
-still stores the folder each file was last saved in, so open the assembly from this folder and Inventor finds the parts
-beside it.
+still stores the folder each file was last saved in (the Windows user name in it is replaced by `user_`), so open the
+assembly from this folder and Inventor finds the parts beside it. The file names (for example `full asseymbly 10.iam`,
+`tupe-16.ipt`, `streches.10.ipt`) are kept exactly as in the project and the report, because the assembly finds its parts by name.
 
 ## Superseded and held runs
 
@@ -160,6 +166,7 @@ release.
 | `_held_real_case/`, `REAL_*`, `RC_*` | Real-case decks (soft tissue, straps, friction 0.37), built and sealed, **not run** |
 | `_held_core_cycles/`, `_dropped_owner_60kPa/` | Cycle decks held back, and the 80 / 100 kPa decks dropped by the 60 kPa limit |
 | `_regen_test/` | Check that the decks rebuild identically |
+| `B0_A8.6`, `B0C_P20_attempt1_killed` | Stopped in their first minutes (queue log 03:36 and 00:16 on 16 Nov, E-71 / E-64): no solver log or results, so there is no `04_Runs` folder; the release zip holds only the console log |
 | `05_Results/*/v3_B0` | Tables and figures of the superseded B0 attempt |
 
 `scripts/old_versions/` keeps the earlier versions of the scripts that some of these runs were built with. The current
