@@ -1,8 +1,8 @@
 Copyright (c) 2026 SDP-2 (MMNB) team. All rights reserved.
 
 This repository (scripts, Nastran input decks, meshes, CAD files, results, figures, reports and the raw solver output
-attached to its releases) is shared with invited collaborators so that they can view it and re-run the simulation for
-review.
+attached to its releases) is published so that the examining committee and other readers can view it and re-run the
+simulation for review.
 
 No other use is permitted without the prior written permission of the copyright holders. This includes copying,
 modifying, redistributing, publishing, or using any part in other work.
